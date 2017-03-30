@@ -73,7 +73,7 @@
     if (req.isValid) {
         if (! _qrImage) {
             _qrImage = [[UIImage imageWithContentsOfFile:QR_IMAGE_FILE] resize:self.qrView.bounds.size
-                        withInterpolationQuality:kCGInterpolationNone];;
+                        withInterpolationQuality:kCGInterpolationNone];
         }
         
         self.qrView.image = _qrImage;

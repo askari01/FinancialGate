@@ -499,7 +499,8 @@ static NSString *dateFormat(NSString *template)
             return (self.moreTx) ? self.transactions.count + 1 : self.transactions.count;
 
         case 1:
-            return (buyEnabled ? 3 : 2);
+//            return (buyEnabled ? 3 : 2);
+            return 9;
     }
 
     return 0;
@@ -628,16 +629,54 @@ static NSString *dateFormat(NSString *template)
             long adjustedRow = !buyEnabled ? indexPath.row + 1 : indexPath.row;
             switch (adjustedRow) {
                 case 0:
-                    cell.textLabel.text = NSLocalizedString(@"Buy Bitcoin", nil);
+                    cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
+                    cell.textLabel.text = NSLocalizedString(@"Home", nil);
+                    cell.imageView.image = [UIImage imageNamed:@""];
+                    break;
+                case 1:
+                    cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
+                    cell.textLabel.text = NSLocalizedString(@"Wallet", nil);
+                    cell.imageView.image = [UIImage imageNamed:@""];
+                    break;
+                case 2:
+                    cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
+                    cell.textLabel.text = NSLocalizedString(@"Trade", nil);
+                    cell.imageView.image = [UIImage imageNamed:@""];
+                    break;
+                case 3:
+                    cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
+                    cell.textLabel.text = NSLocalizedString(@"Debit Card Charge", nil);
+                    cell.imageView.image = [UIImage imageNamed:@""];
+                    break;
+                case 4:
+                    cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
+                    cell.textLabel.text = NSLocalizedString(@"Apply For Debit Card Charge", nil);
+                    cell.imageView.image = [UIImage imageNamed:@""];
+                    break;
+//                case 5:
+//                    cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
+//                    cell.textLabel.text = NSLocalizedString(@"Import Private Key", nil);
+//                    cell.imageView.image = [UIImage imageNamed:@""];
+//                    break;
+//                case 6:
+//                    cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
+//                    cell.textLabel.text = NSLocalizedString(@"Home", nil);
+//                    cell.imageView.image = [UIImage imageNamed:@""];
+//                    break;
+                case 5:
+                    cell.textLabel.text = NSLocalizedString(@"Savings Account", nil);
                     cell.imageView.image = [UIImage imageNamed:@"bitcoin-buy-blue-small"];
                     break;
-                    
-                case 1:
+                case 6:
+                    cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
+                    cell.textLabel.text = NSLocalizedString(@"NEWS", nil);
+                    cell.imageView.image = [UIImage imageNamed:@""];
+                    break;
+                case 7:
                     cell.textLabel.text = NSLocalizedString(@"import private key", nil);
                     cell.imageView.image = [UIImage imageNamed:@"cameraguide-blue-small"];
                     break;
-
-                case 2:
+                case 8:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"settings", nil);
                     cell.imageView.image = [UIImage imageNamed:@"settings"];
@@ -750,18 +789,63 @@ static NSString *dateFormat(NSString *template)
             bool buyEnabled = [[BRAPIClient sharedClient] featureEnabled:BRFeatureFlagsBuyBitcoin];
             long adjustedRow = !buyEnabled ? indexPath.row + 1 : indexPath.row;
             switch (adjustedRow) {
-                case 0: // buy bitcoin
-                    [BREventManager saveEvent:@"tx_history:buy_btc"];
-                    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-                    [self showBuy];
+                    
+                case 0: // HOME
+                    [BREventManager saveEvent:@"tx_history:Home"];
+                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"RootViewController"];
+//                    [self.navigationController presentViewController:destinationController animated:YES completion:nil];
+                    [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                     
-                case 1: // import private key
+                case 1: // Wallet
+                    [BREventManager saveEvent:@"tx_history:Wallet"];
+                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"Wallet"];
+                    [self.navigationController pushViewController:destinationController animated:YES];
+                    break;
+                
+                case 2: // Trade
+                    [BREventManager saveEvent:@"tx_history:Trade"];
+                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"Trade"];
+                    [self.navigationController pushViewController:destinationController animated:YES];
+                    break;
+                    
+                case 3: // DebitCardCharge
+                    [BREventManager saveEvent:@"tx_history:DebitCardCharge"];
+                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"DebitCardCharge"];
+                    [self.navigationController pushViewController:destinationController animated:YES];
+                    break;
+                    
+                case 4: // ApplyDebitCardCharge
+                    [BREventManager saveEvent:@"tx_history:ApplyDebitCardCharge"];
+                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendViewController"];
+                    [self.navigationController pushViewController:destinationController animated:YES];
+                    break;
+                    
+                case 5: // SavingAccount
+                    [BREventManager saveEvent:@"tx_history:SavingAccount"];
+                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SavingAccount"];
+                    [self.navigationController pushViewController:destinationController animated:YES];
+                    break;
+                    
+                case 6: // NEWS
+                    [BREventManager saveEvent:@"tx_history:NEWS"];
+                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendViewController"];
+                    [self.navigationController pushViewController:destinationController animated:YES];
+                    break;
+                    
+                    
+//                case 0: // buy bitcoin
+//                    [BREventManager saveEvent:@"tx_history:buy_btc"];
+//                    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//                    [self showBuy];
+//                    break;
+                    
+                case 7: // import private key
                     [BREventManager saveEvent:@"tx_history:import_priv_key"];
                     [self scanQR:nil];
                     break;
 
-                case 2: // settings
+                case 8: // settings
                     [BREventManager saveEvent:@"tx_history:settings"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
                     [self.navigationController pushViewController:destinationController animated:YES];

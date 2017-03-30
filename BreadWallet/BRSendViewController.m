@@ -28,6 +28,7 @@
 #import "BRScanViewController.h"
 #import "BRAmountViewController.h"
 #import "BRSettingsViewController.h"
+#import "BRReceiveViewController.h"
 #import "BRBubbleView.h"
 #import "BRWalletManager.h"
 #import "BRPeerManager.h"
@@ -40,6 +41,10 @@
 #import "NSData+Bitcoin.h"
 #import "BREventManager.h"
 #import "breadwallet-Swift.h"
+#import <MobileCoreServices/UTCoreTypes.h>
+#import "UIImage+Utils.h"
+#import "BRAppGroupConstants.h"
+
 
 #define SCAN_TIP      NSLocalizedString(@"Scan someone else's QR code to get their bitcoin address. "\
                                          "You can send a payment to anyone with an address.", nil)
@@ -49,6 +54,8 @@
 #define LOCK @"\xF0\x9F\x94\x92" // unicode lock symbol U+1F512 (utf-8)
 #define REDX @"\xE2\x9D\x8C"     // unicode cross mark U+274C, red x emoji (utf-8)
 #define NBSP @"\xC2\xA0"         // no-break space (utf-8)
+//#define QR_IMAGE_FILE [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject\
+stringByAppendingPathComponent:@"qr.png"]
 
 static NSString *sanitizeString(NSString *s)
 {
@@ -69,11 +76,22 @@ static NSString *sanitizeString(NSString *s)
 @property (nonatomic, strong) BRBubbleView *tipView;
 @property (nonatomic, strong) BRScanViewController *scanController;
 @property (nonatomic, strong) id clipboardObserver;
+@property (nonatomic, strong) NSUserDefaults *groupDefs;
+@property (nonatomic, strong) BRPaymentRequest *paymentRequest;
+@property (nonatomic, strong) UIImage *qrImage;
+@property (nonatomic, assign) uint64_t balance;
+
 
 @property (nonatomic, strong) IBOutlet UILabel *sendLabel;
 @property (nonatomic, strong) IBOutlet UIButton *scanButton, *clipboardButton;
 @property (nonatomic, strong) IBOutlet UITextView *clipboardText;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *clipboardXLeft;
+@property (weak, nonatomic) IBOutlet UIImageView *qrView;
+@property (weak, nonatomic) IBOutlet UILabel *btc;
+@property (weak, nonatomic) IBOutlet UILabel *money;
+@property (weak, nonatomic) IBOutlet UIButton *sendButton;
+@property (weak, nonatomic) IBOutlet UIButton *receieveButton;
+
 
 @end
 
@@ -104,6 +122,109 @@ static NSString *sanitizeString(NSString *s)
             }
             else [self updateClipboardText];
         }];
+    
+    // Code
+    BRWalletManager *manager = [BRWalletManager sharedInstance];
+    BRPaymentRequest *req;
+    
+    self.groupDefs = [[NSUserDefaults alloc] initWithSuiteName:APP_GROUP_ID];
+    req = (_paymentRequest) ? _paymentRequest :
+    [BRPaymentRequest requestWithString:[self.groupDefs stringForKey:APP_GROUP_RECEIVE_ADDRESS_KEY]];
+    
+    if (req.isValid) {
+        if (! _qrImage) {
+            NSString *image = @"qr.png";
+            
+            NSArray *paths = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:@"qr.png"];
+//            NSString *cache = [paths objectAtIndex:0];
+//            NSString *fullPath = [NSString stringWithFormat:@"%@/%@", cache, image];
+//            UIImage *image = [UIImage imageWithContentsOfFile:fullPath];
+            _qrImage = [[UIImage imageWithContentsOfFile:paths] resize:self.qrView.bounds.size
+                                                      withInterpolationQuality:kCGInterpolationNone];
+        }
+        
+        self.qrView.image = _qrImage;
+//        [self.addressButton setTitle:req.paymentAddress forState:UIControlStateNormal];
+    }
+//    else [self.addressButton setTitle:nil forState:UIControlStateNormal];
+    
+//    if (req.amount > 0) {
+//        self.label.text = [NSString stringWithFormat:@"%@ (%@)", [manager stringForAmount:req.amount],
+//                           [manager localCurrencyStringForAmount:req.amount]];
+//    }
+
+    // Balance
+    if (_balance && [UIApplication sharedApplication].applicationState != UIApplicationStateBackground) {
+        [self.view addSubview:[[[BRBubbleView viewWithText:[NSString
+                                                            stringWithFormat:NSLocalizedString(@"received %@ (%@)", nil), [manager stringForAmount: _balance],
+                                                            [manager localCurrencyStringForAmount:- _balance]]
+                                                    center:CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2)] popIn]
+                               popOutAfterDelay:3.0]];
+    }
+    
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    NSLog(@"hello %@", [defs valueForKey:@"BALANCE_KEY"]);
+//    [defs doubleForKey:BALANCE_KEY];
+    NSLog(@"hello %@ (%@)", [manager stringForAmount: _balance],
+           [manager localCurrencyStringForAmount: _balance]);
+    _btc.text = [manager stringForAmount: _balance];
+    _money.text = [manager localCurrencyStringForAmount: _balance];
+    // END Balance
+    
+    // END Code
+    
+    
+}
+- (IBAction)ReceieveButton:(id)sender {
+    
+        BRPaymentRequest *req1;
+        req1 = (_paymentRequest) ? _paymentRequest :
+            [BRPaymentRequest requestWithString:[self.groupDefs stringForKey:APP_GROUP_RECEIVE_ADDRESS_KEY]];
+    
+    if (req1.amount == 0) {
+        if (req1.isValid) {
+            [self.groupDefs setObject:req1.data forKey:APP_GROUP_REQUEST_DATA_KEY];
+            [self.groupDefs setObject:req1.paymentAddress forKey:APP_GROUP_RECEIVE_ADDRESS_KEY];
+        }
+        else {
+            [self.groupDefs removeObjectForKey:APP_GROUP_REQUEST_DATA_KEY];
+            [self.groupDefs removeObjectForKey:APP_GROUP_RECEIVE_ADDRESS_KEY];
+        }
+        
+        [self.groupDefs synchronize];
+    }
+
+    
+        if ([self nextTip]) return;
+        [BREventManager saveEvent:@"receive:address"];
+        
+        BOOL req = (_paymentRequest) ? YES : NO;
+        UIActionSheet *actionSheet = [UIActionSheet new];
+        
+        actionSheet.title = [NSString stringWithFormat:NSLocalizedString(@"Receive bitcoins at this address: %@", nil),
+                             req1.paymentAddress];
+        actionSheet.delegate = self;
+        [actionSheet addButtonWithTitle:(req) ? NSLocalizedString(@"copy request to clipboard", nil) :
+         NSLocalizedString(@"copy address to clipboard", nil)];
+        
+        if ([MFMailComposeViewController canSendMail]) {
+            [actionSheet addButtonWithTitle:(req) ? NSLocalizedString(@"send request as email", nil) :
+             NSLocalizedString(@"send address as email", nil)];
+        }
+        
+#if ! TARGET_IPHONE_SIMULATOR
+        if ([MFMessageComposeViewController canSendText]) {
+            [actionSheet addButtonWithTitle:(req) ? NSLocalizedString(@"send request as message", nil) :
+             NSLocalizedString(@"send address as message", nil)];
+        }
+#endif
+        
+        if (! req) [actionSheet addButtonWithTitle:NSLocalizedString(@"request an amount", nil)];
+        [actionSheet addButtonWithTitle:NSLocalizedString(@"cancel", nil)];
+        actionSheet.cancelButtonIndex = actionSheet.numberOfButtons - 1;
+        
+        [actionSheet showInView:[UIApplication sharedApplication].keyWindow];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -949,6 +1070,7 @@ memo:(NSString *)memo isSecure:(BOOL)isSecure
 
 - (IBAction)payToClipboard:(id)sender
 {
+    NSLog(@"hello SEND");
     if ([self nextTip]) return;
     [BREventManager saveEvent:@"send:pay_clipboard"];
 
@@ -977,9 +1099,10 @@ memo:(NSString *)memo isSecure:(BOOL)isSecure
         }
     }
     
-    [sender setEnabled:NO];
+//    [sender setEnabled:NO];
     self.clearClipboard = YES;
     [self payFirstFromArray:set.array];
+    _sendButton.backgroundColor = [UIColor clearColor];
 }
 
 - (IBAction)reset:(id)sender

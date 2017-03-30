@@ -41,7 +41,7 @@
                                         </mask>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="kqc-0F-49V">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="kqc-0F-49V">
                                     <rect key="frame" x="30" y="129" width="315" height="134"/>
                                     <string key="text">Would you like to share anonymous app usage information with us?
 
@@ -111,7 +111,7 @@ This information is completely anonymous and includes no financial information. 
                             </variation>
                             <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="subviews">
-                                    <include reference="Mgm-wb-UlM"/>
+                                    <exclude reference="Mgm-wb-UlM"/>
                                     <include reference="kqc-0F-49V"/>
                                     <include reference="Tw0-s4-w0k"/>
                                     <include reference="fzO-vI-zum"/>
