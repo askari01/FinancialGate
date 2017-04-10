@@ -180,6 +180,7 @@
 
 - (IBAction)start:(id)sender
 {
+    NSLog(@"Starting new Wallet WOWOWO");
     [BREventManager saveEvent:@"welcome:new_wallet"];
     
     UIViewController *c = [self.storyboard instantiateViewControllerWithIdentifier:@"GenerateViewController"];
