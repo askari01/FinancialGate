@@ -132,7 +132,7 @@
                             attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0]];
 //            self.navigationController.view.backgroundColor = self.paralax.backgroundColor;
             self.navigationController.view.clipsToBounds = YES;
-            self.navigationController.view.backgroundColor = [UIColor blackColor];
+            self.navigationController.view.backgroundColor = [UIColor clearColor];
             [self.navigationController.view layoutIfNeeded];
             self.logoXCenter.constant = self.view.frame.size.width;
             self.walletXCenter.constant = 0.0;

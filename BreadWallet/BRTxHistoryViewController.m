@@ -451,32 +451,32 @@ static NSString *dateFormat(NSString *template)
     UIImage *blurredBgImg = [bgImg blurWithRadius:3];
     
     // display the popup
-    __weak BREventConfirmView *view =
-        [[NSBundle mainBundle] loadNibNamed:@"BREventConfirmView" owner:nil options:nil][0];
-    view.titleLabel.text = NSLocalizedString(@"Buy bitcoin in breadwallet!", nil);
-    view.descriptionLabel.text =
-        NSLocalizedString(@"You can now buy bitcoin in\nbreadwallet with cash or\nbank transfer.", nil);
-    [view.okBtn setTitle:NSLocalizedString(@"Try It!", nil) forState:UIControlStateNormal];
-    
-    view.image = blurredBgImg;
-    view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    view.frame = self.navigationController.view.bounds;
-    view.alpha = 0;
-    [self.navigationController.view addSubview:view];
-    
-    [UIView animateWithDuration:.5 animations:^{
-        view.alpha = 1;
-    }];
-    
-    view.completionHandler = ^(BOOL didApprove) {
-        if (didApprove) [self showBuy];
-        
-        [UIView animateWithDuration:.5 animations:^{
-            view.alpha = 0;
-        } completion:^(BOOL finished) {
-            [view removeFromSuperview];
-        }];
-    };
+//    __weak BREventConfirmView *view =
+//        [[NSBundle mainBundle] loadNibNamed:@"BREventConfirmView" owner:nil options:nil][0];
+//    view.titleLabel.text = NSLocalizedString(@"Buy bitcoin in breadwallet!", nil);
+//    view.descriptionLabel.text =
+//        NSLocalizedString(@"You can now buy bitcoin in\nbreadwallet with cash or\nbank transfer.", nil);
+//    [view.okBtn setTitle:NSLocalizedString(@"Try It!", nil) forState:UIControlStateNormal];
+//    
+//    view.image = blurredBgImg;
+//    view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+//    view.frame = self.navigationController.view.bounds;
+//    view.alpha = 0;
+//    [self.navigationController.view addSubview:view];
+//    
+//    [UIView animateWithDuration:.5 animations:^{
+//        view.alpha = 1;
+//    }];
+//    
+//    view.completionHandler = ^(BOOL didApprove) {
+//        if (didApprove) [self showBuy];
+//        
+//        [UIView animateWithDuration:.5 animations:^{
+//            view.alpha = 0;
+//        } completion:^(BOOL finished) {
+//            [view removeFromSuperview];
+//        }];
+//    };
 }
 
 - (void)showBuy
@@ -500,7 +500,7 @@ static NSString *dateFormat(NSString *template)
 
         case 1:
 //            return (buyEnabled ? 3 : 2);
-            return 9;
+            return 8;
     }
 
     return 0;
@@ -628,29 +628,29 @@ static NSString *dateFormat(NSString *template)
             bool buyEnabled = [[BRAPIClient sharedClient] featureEnabled:BRFeatureFlagsBuyBitcoin];
             long adjustedRow = !buyEnabled ? indexPath.row + 1 : indexPath.row;
             switch (adjustedRow) {
+//                case 0:
+//                    cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
+//                    cell.textLabel.text = NSLocalizedString(@"Home", nil);
+//                    cell.imageView.image = [UIImage imageNamed:@""];
+//                    break;
                 case 0:
-                    cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
-                    cell.textLabel.text = NSLocalizedString(@"Home", nil);
-                    cell.imageView.image = [UIImage imageNamed:@""];
-                    break;
-                case 1:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"Wallet", nil);
                     cell.imageView.image = [UIImage imageNamed:@""];
                     break;
-                case 2:
+                case 1:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"Trade", nil);
                     cell.imageView.image = [UIImage imageNamed:@""];
                     break;
-                case 3:
+                case 2:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"Debit Card Charge", nil);
                     cell.imageView.image = [UIImage imageNamed:@""];
                     break;
-                case 4:
+                case 3:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
-                    cell.textLabel.text = NSLocalizedString(@"Apply For Debit Card Charge", nil);
+                    cell.textLabel.text = NSLocalizedString(@"Apply For Debit Card", nil);
                     cell.imageView.image = [UIImage imageNamed:@""];
                     break;
 //                case 5:
@@ -663,23 +663,25 @@ static NSString *dateFormat(NSString *template)
 //                    cell.textLabel.text = NSLocalizedString(@"Home", nil);
 //                    cell.imageView.image = [UIImage imageNamed:@""];
 //                    break;
-                case 5:
+                case 4:
+                    cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"Savings Account", nil);
-                    cell.imageView.image = [UIImage imageNamed:@"bitcoin-buy-blue-small"];
+//                    cell.imageView.image = [UIImage imageNamed:@"bitcoin-buy-blue-small"];
+                    break;
+                case 5:
+                    cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
+                    cell.textLabel.text = NSLocalizedString(@"News", nil);
+//                    cell.imageView.image = [UIImage imageNamed:@""];
                     break;
                 case 6:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
-                    cell.textLabel.text = NSLocalizedString(@"NEWS", nil);
-                    cell.imageView.image = [UIImage imageNamed:@""];
+                    cell.textLabel.text = NSLocalizedString(@"Import Private Key", nil);
+//                    cell.imageView.image = [UIImage imageNamed:@"cameraguide-blue-small"];
                     break;
                 case 7:
-                    cell.textLabel.text = NSLocalizedString(@"import private key", nil);
-                    cell.imageView.image = [UIImage imageNamed:@"cameraguide-blue-small"];
-                    break;
-                case 8:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
-                    cell.textLabel.text = NSLocalizedString(@"settings", nil);
-                    cell.imageView.image = [UIImage imageNamed:@"settings"];
+                    cell.textLabel.text = NSLocalizedString(@"Settings", nil);
+//                    cell.imageView.image = [UIImage imageNamed:@"settings"];
                     break;
             }
             
@@ -790,45 +792,45 @@ static NSString *dateFormat(NSString *template)
             long adjustedRow = !buyEnabled ? indexPath.row + 1 : indexPath.row;
             switch (adjustedRow) {
                     
-                case 0: // HOME
-                    [BREventManager saveEvent:@"tx_history:Home"];
-                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"RootViewController"];
-//                    [self.navigationController presentViewController:destinationController animated:YES completion:nil];
-                    [self.navigationController pushViewController:destinationController animated:YES];
-                    break;
+//                case 0: // HOME
+//                    [BREventManager saveEvent:@"tx_history:Home"];
+//                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"RootViewController"];
+////                    [self.navigationController presentViewController:destinationController animated:YES completion:nil];
+//                    [self.navigationController pushViewController:destinationController animated:YES];
+//                    break;
                     
-                case 1: // Wallet
+                case 0: // Wallet
                     [BREventManager saveEvent:@"tx_history:Wallet"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"Wallet"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                 
-                case 2: // Trade
+                case 1: // Trade
                     [BREventManager saveEvent:@"tx_history:Trade"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"Trade"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                     
-                case 3: // DebitCardCharge
+                case 2: // DebitCardCharge
                     [BREventManager saveEvent:@"tx_history:DebitCardCharge"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"DebitCardCharge"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                     
-                case 4: // ApplyDebitCardCharge
+                case 3: // ApplyDebitCardCharge
                     [BREventManager saveEvent:@"tx_history:ApplyDebitCardCharge"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendViewController"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                     
-                case 5: // SavingAccount
+                case 4: // SavingAccount
                     [BREventManager saveEvent:@"tx_history:SavingAccount"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SavingAccount"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                     
-                case 6: // NEWS
-                    [BREventManager saveEvent:@"tx_history:NEWS"];
+                case 5: // NEWS
+                    [BREventManager saveEvent:@"tx_history:News"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendViewController"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
@@ -840,12 +842,12 @@ static NSString *dateFormat(NSString *template)
 //                    [self showBuy];
 //                    break;
                     
-                case 7: // import private key
+                case 6: // import private key
                     [BREventManager saveEvent:@"tx_history:import_priv_key"];
                     [self scanQR:nil];
                     break;
 
-                case 8: // settings
+                case 7: // settings
                     [BREventManager saveEvent:@"tx_history:settings"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
                     [self.navigationController pushViewController:destinationController animated:YES];

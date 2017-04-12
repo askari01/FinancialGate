@@ -185,13 +185,13 @@
         struct utsname systemInfo;
         
         uname(&systemInfo);
-        msg = [NSString stringWithFormat:@"%s / iOS %@ / breadwallet %@ - %@%@\n\n",
+        msg = [NSString stringWithFormat:@"%s / iOS %@ / financialgate %@ - %@%@\n\n",
                systemInfo.machine, UIDevice.currentDevice.systemVersion,
                NSBundle.mainBundle.infoDictionary[@"CFBundleShortVersionString"],
                NSBundle.mainBundle.infoDictionary[@"CFBundleVersion"],
                ([BRWalletManager sharedInstance].watchOnly) ? @" (watch only)" : @""];
         
-        composeController.toRecipients = @[@"support@breadwallet.com"];
+        composeController.toRecipients = @[@"support@financialgate.com"];
         composeController.subject = @"support request";
         [composeController setMessageBody:msg isHTML:NO];
         composeController.mailComposeDelegate = self;
@@ -294,7 +294,7 @@
         case 0: return 2;
         case 1: return (self.touchId) ? 3 : 2;
         case 2: return 3;
-        case 3: return 1;
+        case 3: return 0;
     }
     
     return 0;
@@ -385,7 +385,7 @@ _switch_cell:
             }
             break;
             
-        case 3:
+        case 3: 
             cell = [tableView dequeueReusableCellWithIdentifier:actionIdent];
             cell.textLabel.text = @"early access";
 
