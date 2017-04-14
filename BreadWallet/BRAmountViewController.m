@@ -115,8 +115,8 @@
         if ([BRWalletManager sharedInstance].didAuthenticate) [self unlock:nil];
     }
     else {
-//        self.memoField.userInteractionEnabled = YES;
-//        self.memoField.placeholder = NSLocalizedString(@"memo:", nil);
+        self.memoField.userInteractionEnabled = YES;
+        self.memoField.placeholder = NSLocalizedString(@"memo:", nil);
         self.payButton.title = NSLocalizedString(@"request", nil);
         self.navigationItem.rightBarButtonItem = self.payButton;
     }

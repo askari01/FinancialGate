@@ -847,7 +847,7 @@
         self.tipView = [BRBubbleView viewWithText:tip
                         tipPoint:CGPointMake(bar.center.x, bar.frame.origin.y + bar.frame.size.height - 10)
                         tipDirection:BRBubbleTipDirectionUp];
-        self.tipView.backgroundColor = [UIColor orangeColor];
+        self.tipView.backgroundColor = [UIColor lightGrayColor];
         self.tipView.font = [UIFont fontWithName:@"HelveticaNeue" size:15.0];
         self.tipView.userInteractionEnabled = NO;
         [self.view addSubview:[self.tipView popIn]];

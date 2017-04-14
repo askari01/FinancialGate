@@ -926,7 +926,7 @@ memo:(NSString *)memo isSecure:(BOOL)isSecure
         self.tipView.backgroundColor = tipView.backgroundColor;
         self.tipView.font = tipView.font;
         self.tipView.userInteractionEnabled = NO;
-        [self.view addSubview:[self.tipView popIn]];
+//        [self.view addSubview:[self.tipView popIn]];
     }
     else if (self.showTips && [tipView.text hasPrefix:CLIPBOARD_TIP]) {
         self.showTips = NO;
@@ -986,8 +986,26 @@ memo:(NSString *)memo isSecure:(BOOL)isSecure
 //
 //        dispatch_async(dispatch_get_main_queue(), ^{
 //            CGFloat textWidth = [text sizeWithAttributes:@{NSFontAttributeName:self.clipboardText.font}].width + 12;
-//
-//            self.clipboardText.text = text;
+    
+    
+    BRPaymentRequest *req1;
+    req1 = (_paymentRequest) ? _paymentRequest :
+    [BRPaymentRequest requestWithString:[self.groupDefs stringForKey:APP_GROUP_RECEIVE_ADDRESS_KEY]];
+    
+    if (req1.amount == 0) {
+        if (req1.isValid) {
+            [self.groupDefs setObject:req1.data forKey:APP_GROUP_REQUEST_DATA_KEY];
+            [self.groupDefs setObject:req1.paymentAddress forKey:APP_GROUP_RECEIVE_ADDRESS_KEY];
+        }
+        else {
+            [self.groupDefs removeObjectForKey:APP_GROUP_REQUEST_DATA_KEY];
+            [self.groupDefs removeObjectForKey:APP_GROUP_RECEIVE_ADDRESS_KEY];
+        }
+        
+        [self.groupDefs synchronize];
+    }
+    self.clipboardText.text = [NSString stringWithFormat:@"Your Current Bitcoin Address\n%@",req1.paymentAddress];
+    
 //            if (textWidth < self.clipboardButton.bounds.size.width ) textWidth = self.clipboardButton.bounds.size.width;
 //            if (textWidth > self.view.bounds.size.width - 16.0) textWidth = self.view.bounds.size.width - 16.0;
 //            self.clipboardXLeft.constant = (self.view.bounds.size.width - textWidth)/2.0;
@@ -1052,7 +1070,7 @@ memo:(NSString *)memo isSecure:(BOOL)isSecure
     self.tipView = [BRBubbleView viewWithText:SCAN_TIP
                     tipPoint:CGPointMake(self.scanButton.center.x, self.scanButton.center.y - 10.0)
                     tipDirection:BRBubbleTipDirectionDown];
-    self.tipView.backgroundColor = [UIColor orangeColor];
+    self.tipView.backgroundColor = [UIColor lightGrayColor];
     self.tipView.font = [UIFont fontWithName:@"HelveticaNeue" size:15.0];
     [self.view addSubview:[self.tipView popIn]];
 }

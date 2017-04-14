@@ -86,6 +86,23 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    self.newwalletButton.layer.cornerRadius = 10;
+    self.newwalletButton.layer.borderWidth = 2;
+    self.newwalletButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
+    self.recoverButton.layer.cornerRadius = 10;
+    self.recoverButton.layer.borderWidth = 2;
+    self.recoverButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
+    self.generateButton.layer.cornerRadius = 10;
+    self.generateButton.layer.borderWidth = 2;
+    self.generateButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
+    self.showButton.layer.cornerRadius = 10;
+    self.showButton.layer.borderWidth = 2;
+    self.showButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:animated];
     

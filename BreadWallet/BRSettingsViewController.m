@@ -62,6 +62,9 @@
     [super viewWillAppear:animated];
  
     BRWalletManager *manager = [BRWalletManager sharedInstance];
+    
+    self.navigationController.navigationItem.backBarButtonItem.enabled = YES;
+    self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
 
     if (self.navBarSwipe) [self.navigationController.navigationBar removeGestureRecognizer:self.navBarSwipe];
     self.navBarSwipe = nil;

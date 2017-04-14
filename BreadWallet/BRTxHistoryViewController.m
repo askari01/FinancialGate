@@ -96,6 +96,9 @@ static NSString *dateFormat(NSString *template)
     [super viewWillAppear:animated];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
     
+    self.navigationController.navigationItem.backBarButtonItem.enabled = YES;
+    self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
+    
     BRWalletManager *manager = [BRWalletManager sharedInstance];
     
 #if SNAPSHOT
@@ -819,7 +822,7 @@ static NSString *dateFormat(NSString *template)
                     
                 case 3: // ApplyDebitCardCharge
                     [BREventManager saveEvent:@"tx_history:ApplyDebitCardCharge"];
-                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendViewController"];
+                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"ApplyDebitCard"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                     
@@ -831,7 +834,7 @@ static NSString *dateFormat(NSString *template)
                     
                 case 5: // NEWS
                     [BREventManager saveEvent:@"tx_history:News"];
-                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendViewController"];
+                    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"NEWS"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                     
