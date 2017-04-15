@@ -17,9 +17,14 @@
 
 @implementation BRTEST
 
+UIViewController *destinationController = nil;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    
     self.debitButton.layer.cornerRadius = 10;
     self.debitButton.layer.borderWidth = 2;
     self.debitButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
@@ -31,6 +36,7 @@
     self.tradeButton.layer.cornerRadius = 10;
     self.tradeButton.layer.borderWidth = 2;
     self.tradeButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,6 +57,18 @@
     self.tradeButton.layer.borderWidth = 2;
     self.tradeButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
 }
+
+- (IBAction)debitCardCharge:(UIButton *)sender {
+    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"DebitCardBalance"];
+    [self.navigationController pushViewController:destinationController animated:YES];
+}
+
+- (IBAction)invest:(UIButton *)sender {
+    destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"BTC"];
+    [self.navigationController pushViewController:destinationController animated:YES];
+}
+
+
 /*
 #pragma mark - Navigation
 

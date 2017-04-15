@@ -91,11 +91,14 @@ static NSString *sanitizeString(NSString *s)
 @property (weak, nonatomic) IBOutlet UILabel *money;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
 @property (weak, nonatomic) IBOutlet UIButton *receieveButton;
+@property (nonatomic, strong) IBOutlet UIGestureRecognizer *navBarTap;
 
 
 @end
 
 @implementation BRSendViewController
+
+int check = 1;
 
 - (void)viewDidLoad
 {
@@ -219,7 +222,7 @@ static NSString *sanitizeString(NSString *s)
         }
 #endif
         
-        if (! req) [actionSheet addButtonWithTitle:NSLocalizedString(@"request an amount", nil)];
+//        if (! req) [actionSheet addButtonWithTitle:NSLocalizedString(@"request an amount", nil)];
         [actionSheet addButtonWithTitle:NSLocalizedString(@"cancel", nil)];
         actionSheet.cancelButtonIndex = actionSheet.numberOfButtons - 1;
         
@@ -244,6 +247,8 @@ static NSString *sanitizeString(NSString *s)
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+    if (self.navBarTap) [self.navigationController.navigationBar removeGestureRecognizer:self.navBarTap];
+    self.navBarTap = nil;
     [self hideTips];
     [super viewWillDisappear:animated];
 }
@@ -944,74 +949,78 @@ memo:(NSString *)memo isSecure:(BOOL)isSecure
 
 - (void)updateClipboardText
 {
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        NSString *str = [[UIPasteboard generalPasteboard].string
-//                         stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-//        NSString *text = @"";
-//        UIImage *img = [UIPasteboard generalPasteboard].image;
-//        NSMutableOrderedSet *set = [NSMutableOrderedSet orderedSet];
-//        NSCharacterSet *separators = [NSCharacterSet alphanumericCharacterSet].invertedSet;
-//        
-//        if (str) {
-//            [set addObject:str];
-//            [set addObjectsFromArray:[str componentsSeparatedByCharactersInSet:separators]];
-//        }
-//        
-//        if (img) {
-//            @synchronized ([CIContext class]) {
-//                CIContext *context = [CIContext contextWithOptions:@{kCIContextUseSoftwareRenderer:@(YES)}];
-//                
-//                if (! context) context = [CIContext context];
-//
-//                for (CIQRCodeFeature *qr in [[CIDetector detectorOfType:CIDetectorTypeQRCode context:context
-//                                              options:nil] featuresInImage:[CIImage imageWithCGImage:img.CGImage]]) {
-//                    [set addObject:[qr.messageString
-//                                    stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
-//                }
-//            }
-//        }
-//    
-//        for (NSString *s in set) {
-//            BRPaymentRequest *req = [BRPaymentRequest requestWithString:s];
-//            
-//            if ([req.paymentAddress isValidBitcoinAddress]) {
-//                text = (req.label.length > 0) ? sanitizeString(req.label) : req.paymentAddress;
-//                break;
-//            }
-//            else if ([s hasPrefix:@"bitcoin:"]) {
-//                text = sanitizeString(s);
-//                break;
-//            }
-//        }
-//
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            CGFloat textWidth = [text sizeWithAttributes:@{NSFontAttributeName:self.clipboardText.font}].width + 12;
     
-    
-    BRPaymentRequest *req1;
-    req1 = (_paymentRequest) ? _paymentRequest :
-    [BRPaymentRequest requestWithString:[self.groupDefs stringForKey:APP_GROUP_RECEIVE_ADDRESS_KEY]];
-    
-    if (req1.amount == 0) {
-        if (req1.isValid) {
-            [self.groupDefs setObject:req1.data forKey:APP_GROUP_REQUEST_DATA_KEY];
-            [self.groupDefs setObject:req1.paymentAddress forKey:APP_GROUP_RECEIVE_ADDRESS_KEY];
-        }
-        else {
-            [self.groupDefs removeObjectForKey:APP_GROUP_REQUEST_DATA_KEY];
-            [self.groupDefs removeObjectForKey:APP_GROUP_RECEIVE_ADDRESS_KEY];
-        }
+    if (check == 1) {
+        BRPaymentRequest *req1;
+        req1 = (_paymentRequest) ? _paymentRequest :
+        [BRPaymentRequest requestWithString:[self.groupDefs stringForKey:APP_GROUP_RECEIVE_ADDRESS_KEY]];
         
-        [self.groupDefs synchronize];
+        if (req1.amount == 0) {
+            if (req1.isValid) {
+                [self.groupDefs setObject:req1.data forKey:APP_GROUP_REQUEST_DATA_KEY];
+                [self.groupDefs setObject:req1.paymentAddress forKey:APP_GROUP_RECEIVE_ADDRESS_KEY];
+            }
+            else {
+                [self.groupDefs removeObjectForKey:APP_GROUP_REQUEST_DATA_KEY];
+                [self.groupDefs removeObjectForKey:APP_GROUP_RECEIVE_ADDRESS_KEY];
+            }
+            
+            [self.groupDefs synchronize];
+        }
+        self.clipboardText.text = [NSString stringWithFormat:@"Your Current Bitcoin Address\n%@\nTap to paste Bitcoin Address from clipboard",req1.paymentAddress];
+        check = 0;
+    } else
+    {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSString *str = [[UIPasteboard generalPasteboard].string
+                             stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            NSString *text = @"";
+            UIImage *img = [UIPasteboard generalPasteboard].image;
+            NSMutableOrderedSet *set = [NSMutableOrderedSet orderedSet];
+            NSCharacterSet *separators = [NSCharacterSet alphanumericCharacterSet].invertedSet;
+            
+            if (str) {
+                [set addObject:str];
+                [set addObjectsFromArray:[str componentsSeparatedByCharactersInSet:separators]];
+            }
+            
+            if (img) {
+                @synchronized ([CIContext class]) {
+                    CIContext *context = [CIContext contextWithOptions:@{kCIContextUseSoftwareRenderer:@(YES)}];
+                    
+                    if (! context) context = [CIContext context];
+
+                    for (CIQRCodeFeature *qr in [[CIDetector detectorOfType:CIDetectorTypeQRCode context:context
+                                                  options:nil] featuresInImage:[CIImage imageWithCGImage:img.CGImage]]) {
+                        [set addObject:[qr.messageString
+                                        stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+                    }
+                }
+            }
+        
+            for (NSString *s in set) {
+                BRPaymentRequest *req = [BRPaymentRequest requestWithString:s];
+                
+                if ([req.paymentAddress isValidBitcoinAddress]) {
+                    text = (req.label.length > 0) ? sanitizeString(req.label) : req.paymentAddress;
+                    break;
+                }
+                else if ([s hasPrefix:@"bitcoin:"]) {
+                    text = sanitizeString(s);
+                    break;
+                }
+            }
+
+            dispatch_async(dispatch_get_main_queue(), ^{
+                CGFloat textWidth = [text sizeWithAttributes:@{NSFontAttributeName:self.clipboardText.font}].width + 12;
+        
+                if (textWidth < self.clipboardButton.bounds.size.width ) textWidth = self.clipboardButton.bounds.size.width;
+                if (textWidth > self.view.bounds.size.width - 16.0) textWidth = self.view.bounds.size.width - 16.0;
+                self.clipboardXLeft.constant = (self.view.bounds.size.width - textWidth)/2.0;
+                [self.clipboardText scrollRangeToVisible:NSMakeRange(0, 0)];
+            });
+        });
     }
-    self.clipboardText.text = [NSString stringWithFormat:@"Your Current Bitcoin Address\n%@",req1.paymentAddress];
-    
-//            if (textWidth < self.clipboardButton.bounds.size.width ) textWidth = self.clipboardButton.bounds.size.width;
-//            if (textWidth > self.view.bounds.size.width - 16.0) textWidth = self.view.bounds.size.width - 16.0;
-//            self.clipboardXLeft.constant = (self.view.bounds.size.width - textWidth)/2.0;
-//            [self.clipboardText scrollRangeToVisible:NSMakeRange(0, 0)];
-//        });
-//    });
 }
 
 - (void)payFirstFromArray:(NSArray *)array
@@ -1425,6 +1434,116 @@ presentingController:(UIViewController *)presenting sourceController:(UIViewCont
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
     return self;
+}
+
+// MARK: - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [actionSheet buttonTitleAtIndex:buttonIndex];
+    
+    //TODO: allow user to create a payment protocol request object, and use merge avoidance techniques:
+    // https://medium.com/@octskyward/merge-avoidance-7f95a386692f
+    
+    if ([title isEqual:NSLocalizedString(@"copy address to clipboard", nil)] ||
+        [title isEqual:NSLocalizedString(@"copy request to clipboard", nil)]) {
+        [UIPasteboard generalPasteboard].string = (self.paymentRequest.amount > 0) ? self.paymentRequest.string :
+        self.paymentAddress;
+        NSLog(@"\n\nCOPIED PAYMENT REQUEST/ADDRESS:\n\n%@", [UIPasteboard generalPasteboard].string);
+        
+        [self.view addSubview:[[[BRBubbleView viewWithText:NSLocalizedString(@"copied", nil)
+                                                    center:CGPointMake(self.view.bounds.size.width/2.0, self.view.bounds.size.height/2.0 - 130.0)] popIn]
+                               popOutAfterDelay:2.0]];
+        [BREventManager saveEvent:@"receive:copy_address"];
+    }
+    else if ([title isEqual:NSLocalizedString(@"send address as email", nil)] ||
+             [title isEqual:NSLocalizedString(@"send request as email", nil)]) {
+        //TODO: implement BIP71 payment protocol mime attachement
+        // https://github.com/bitcoin/bips/blob/master/bip-0071.mediawiki
+        
+        if ([MFMailComposeViewController canSendMail]) {
+            MFMailComposeViewController *composeController = [MFMailComposeViewController new];
+            
+            composeController.subject = NSLocalizedString(@"Bitcoin address", nil);
+            [composeController setMessageBody:self.paymentRequest.string isHTML:NO];
+            [composeController addAttachmentData:UIImagePNGRepresentation(self.qrView.image) mimeType:@"image/png"
+                                        fileName:@"qr.png"];
+            composeController.mailComposeDelegate = self;
+            [self.navigationController presentViewController:composeController animated:YES completion:nil];
+            composeController.view.backgroundColor =
+            [UIColor colorWithPatternImage:[UIImage imageNamed:@"wallpaper-default"]];
+            [BREventManager saveEvent:@"receive:send_email"];
+        }
+        else {
+            [BREventManager saveEvent:@"receive:email_not_configured"];
+            [[[UIAlertView alloc] initWithTitle:@"" message:NSLocalizedString(@"email not configured", nil) delegate:nil
+                              cancelButtonTitle:NSLocalizedString(@"ok", nil) otherButtonTitles:nil] show];
+        }
+    }
+    else if ([title isEqual:NSLocalizedString(@"send address as message", nil)] ||
+             [title isEqual:NSLocalizedString(@"send request as message", nil)]) {
+        if ([MFMessageComposeViewController canSendText]) {
+            MFMessageComposeViewController *composeController = [MFMessageComposeViewController new];
+            
+            if ([MFMessageComposeViewController canSendSubject]) {
+                composeController.subject = NSLocalizedString(@"Bitcoin address", nil);
+            }
+            
+            composeController.body = self.paymentRequest.string;
+            
+            if ([MFMessageComposeViewController canSendAttachments]) {
+                [composeController addAttachmentData:UIImagePNGRepresentation(self.qrView.image)
+                                      typeIdentifier:(NSString *)kUTTypePNG filename:@"qr.png"];
+            }
+            
+            composeController.messageComposeDelegate = self;
+            [self.navigationController presentViewController:composeController animated:YES completion:nil];
+            composeController.view.backgroundColor = [UIColor colorWithPatternImage:
+                                                      [UIImage imageNamed:@"wallpaper-default"]];
+            [BREventManager saveEvent:@"receive:send_message"];
+        }
+        else {
+            [BREventManager saveEvent:@"receive:message_not_configured"];
+            [[[UIAlertView alloc] initWithTitle:@"" message:NSLocalizedString(@"sms not currently available", nil)
+                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"ok", nil) otherButtonTitles:nil] show];
+        }
+    }
+    else if ([title isEqual:NSLocalizedString(@"request an amount", nil)]) {
+        UINavigationController *amountNavController = [self.storyboard
+                                                       instantiateViewControllerWithIdentifier:@"AmountNav"];
+        
+        ((BRAmountViewController *)amountNavController.topViewController).delegate = self;
+        [self.navigationController presentViewController:amountNavController animated:YES completion:nil];
+        [BREventManager saveEvent:@"receive:request_amount"];
+    }
+}
+
+- (BRPaymentRequest *)paymentRequest
+{
+    if (_paymentRequest) return _paymentRequest;
+    return [BRPaymentRequest requestWithString:self.paymentAddress];
+}
+
+- (NSString *)paymentAddress
+{
+    if (_paymentRequest) return _paymentRequest.paymentAddress;
+    return [BRWalletManager sharedInstance].wallet.receiveAddress;
+}
+
+// MARK: - MFMessageComposeViewControllerDelegate
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller
+                 didFinishWithResult:(MessageComposeResult)result
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
+// MARK: - MFMailComposeViewControllerDelegate
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError *)error
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
