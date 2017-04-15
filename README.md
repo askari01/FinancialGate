@@ -1,8 +1,6 @@
-![ƀ](/images/icon.png) breadwallet
+Financial Gate
 ----------------------------------
 
-[![download](/images/Download_on_the_App_Store_Badge_US-UK_135x40.png)]
-(https://itunes.apple.com/app/breadwallet/id885251393)
 
 #####bitcoin done right
 
@@ -21,16 +19,16 @@ performance you need on a mobile device.
 
 #####the next step in wallet security:
 
-breadwallet is designed to protect you from malware, browser security holes,
+financialGate is designed to protect you from malware, browser security holes,
 *even physical theft*. With AES hardware encryption, app sandboxing, keychain
-and code signatures, breadwallet represents a significant security advance over
+and code signatures, financialGate represents a significant security advance over
 web and desktop wallets, and other mobile platforms.
 
 #####beautiful simplicity:
 
-Simplicity is breadwallet's core design principle. A simple backup phrase is
+Simplicity is financialGate's core design principle. A simple backup phrase is
 all you need to restore your wallet on another device if yours is ever lost or
-broken.  Because breadwallet is  
+broken.  Because financialGate is  
 [deterministic](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki),
 your balance and transaction history can be recovered from just your backup
 phrase.
@@ -48,7 +46,7 @@ phrase.
 
 #####URL scheme:
 
-breadwallet supports the [x-callback-url](http://x-callback-url.com)
+financialGate supports the [x-callback-url](http://x-callback-url.com)
 specification with the following URLs:
 
 ```
@@ -73,5 +71,5 @@ and rob you by self-signing as described [here](http://www.saurik.com/id/8)
 and including `<key>application-identifier</key><string>*</string>` in its
 .entitlements file.
 
-breadwallet is open source and available under the terms of the MIT license.
-Source code is available at https://github.com/voisine/breadwallet
+financialGate is open source and available under the terms of the MIT license.
+Source code is available at https://github.com/askari01/breadwallet
