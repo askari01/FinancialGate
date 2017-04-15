@@ -6,7 +6,7 @@ Financial Gate
 
 the simplest and most secure bitcoin wallet on any platform 
 
-![screenshot1](/images/screenshot1.jpg)
+
 
 #####the first standalone iOS bitcoin wallet:
 
@@ -33,7 +33,7 @@ broken.  Because financialGate is
 your balance and transaction history can be recovered from just your backup
 phrase.
 
-![screenshot2](/images/screenshot2.jpg)
+
 
 #####features:
 
