@@ -1291,7 +1291,7 @@
                             </connections>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="YZJ-Ar-CCc">
-                            <rect key="frame" x="113" y="14.5" width="94" height="15"/>
+                            <rect key="frame" x="160" y="14.5" width="94" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="breadwallet" translatesAutoresizingMaskIntoConstraints="NO" id="Upd-gS-ln6">
@@ -1851,7 +1851,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3D6-D7-2JP">
@@ -2282,7 +2282,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.22352941179999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SelectorCell" textLabel="8e2-ar-Ehc" detailTextLabel="CsQ-fq-mfQ" style="IBUITableViewCellStyleValue1" id="rM0-Jn-tRC">
                                 <rect key="frame" x="0.0" y="66" width="414" height="44"/>
@@ -2298,8 +2298,8 @@
                                                 <constraint firstAttribute="height" constant="0.5" id="466-pN-bFl"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="local currency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="101.5" id="8e2-ar-Ehc">
-                                            <rect key="frame" x="14.999999999999993" y="11.999999999999998" width="101.33333333333333" height="20.333333333333332"/>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Local Currency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="101.5" id="8e2-ar-Ehc">
+                                            <rect key="frame" x="14.999999999999993" y="11.999999999999998" width="110.33333333333333" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2332,6 +2332,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.22352941179999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestoreCell" textLabel="D1b-HB-lKH" style="IBUITableViewCellStyleDefault" id="p0r-06-7C6">
                                 <rect key="frame" x="0.0" y="110" width="414" height="44"/>
@@ -2347,7 +2348,7 @@
                                                 <constraint firstAttribute="height" constant="0.5" id="mL5-oy-Mfm"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="start/recover another wallet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="345" id="D1b-HB-lKH">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Start/Recover another Wallet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="345" id="D1b-HB-lKH">
                                             <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
@@ -2373,6 +2374,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.22352941179999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="HCk-Gb-uZI" kind="presentation" id="r7P-ed-365"/>
                                 </connections>
@@ -2417,6 +2419,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.22352941179999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectorOptionCell" textLabel="mpz-vn-jZ1" style="IBUITableViewCellStyleDefault" id="b4I-uD-bzz">
                                 <rect key="frame" x="0.0" y="198" width="414" height="44"/>
@@ -2458,6 +2461,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.22352941179999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SwitchCell" id="Pe6-Hf-Vsq" customClass="BRUserDefaultsSwitchCell">
                                 <rect key="frame" x="0.0" y="242" width="414" height="44"/>
@@ -2509,6 +2513,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.22352941179999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="theSwitch" destination="4SS-5m-RoG" id="FOr-aZ-qN5"/>
                                     <outlet property="titleLabel" destination="mxS-i4-y1n" id="xhY-JU-IDh"/>
@@ -2741,7 +2746,7 @@ Other devices may be infected.
                                     </fragment>
                                 </attributedString>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efL-Cj-Aho">
@@ -2775,11 +2780,11 @@ Other devices may be infected.
                     <navigationItem key="navigationItem" id="xhy-mj-rkK">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="2TI-4e-OIp">
-                            <rect key="frame" x="207" y="13" width="0.0" height="18"/>
+                            <rect key="frame" x="160" y="13" width="94" height="18"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="breadwallet" translatesAutoresizingMaskIntoConstraints="NO" id="8lh-UZ-tbs">
-                                    <rect key="frame" x="-49" y="0.0" width="98" height="18"/>
+                                    <rect key="frame" x="-2" y="0.0" width="98" height="18"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="98" id="lIA-6t-4b4"/>
                                     </constraints>
@@ -2886,7 +2891,7 @@ Other devices may be infected.
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="please write it down" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="Td7-xP-kmB">
@@ -2894,7 +2899,7 @@ Other devices may be infected.
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPH-1d-tW9">
@@ -2948,7 +2953,7 @@ Other devices may be infected.
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJj-7p-7Bt">
@@ -3096,14 +3101,14 @@ Other devices may be infected.
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5nR-Xe-ZRa">
                                 <rect key="frame" x="83" y="582" width="303" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRN-iO-ehy">
                                 <rect key="frame" x="83" y="523" width="303" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -3245,13 +3250,13 @@ Other devices may be infected.
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border" translatesAutoresizingMaskIntoConstraints="NO" id="NMF-kC-sPJ">
-                                <rect key="frame" x="26" y="434" width="362" height="201"/>
+                                <rect key="frame" x="26" y="410" width="362" height="249"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border" translatesAutoresizingMaskIntoConstraints="NO" id="g4k-JB-6nX">
-                                <rect key="frame" x="26" y="136" width="362" height="201"/>
+                                <rect key="frame" x="26" y="112" width="362" height="201"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vch-qc-iq0">
-                                <rect key="frame" x="35" y="196" width="96" height="81"/>
+                                <rect key="frame" x="35" y="196" width="96" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="aew-Ad-C0n"/>
                                 </constraints>
@@ -3260,7 +3265,7 @@ Other devices may be infected.
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3400" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBT-aO-yFs">
-                                <rect key="frame" x="162" y="180" width="216" height="113"/>
+                                <rect key="frame" x="162" y="180" width="216" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3291,7 +3296,7 @@ Other devices may be infected.
                             <constraint firstItem="WxM-cC-Od0" firstAttribute="leading" secondItem="Yg2-um-exE" secondAttribute="leadingMargin" constant="26" id="C5Z-P8-2bL"/>
                             <constraint firstItem="nUV-bl-zxl" firstAttribute="leading" secondItem="WxM-cC-Od0" secondAttribute="trailing" constant="24" id="Ifg-yO-hhL"/>
                             <constraint firstItem="NMF-kC-sPJ" firstAttribute="top" secondItem="g4k-JB-6nX" secondAttribute="bottom" constant="97" id="Nfb-D4-gSB"/>
-                            <constraint firstItem="g4k-JB-6nX" firstAttribute="top" secondItem="otp-4s-0s4" secondAttribute="bottom" constant="72" id="P72-bY-sCs"/>
+                            <constraint firstItem="g4k-JB-6nX" firstAttribute="top" secondItem="otp-4s-0s4" secondAttribute="bottom" constant="48" id="P72-bY-sCs"/>
                             <constraint firstItem="zo7-K2-x5P" firstAttribute="top" secondItem="WxM-cC-Od0" secondAttribute="bottom" constant="177" id="Vdg-Jw-dvX"/>
                             <constraint firstItem="Vch-qc-iq0" firstAttribute="centerY" secondItem="EBT-aO-yFs" secondAttribute="centerY" id="au8-0j-cjz"/>
                             <constraint firstItem="WxM-cC-Od0" firstAttribute="centerY" secondItem="nUV-bl-zxl" secondAttribute="centerY" constant="-3" id="avV-TX-FmW"/>
@@ -3381,7 +3386,7 @@ Other devices may be infected.
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xr5-3I-Ziz">
                                 <rect key="frame" x="86" y="588" width="296" height="48"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -3427,7 +3432,7 @@ Other devices may be infected.
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border" translatesAutoresizingMaskIntoConstraints="NO" id="b1f-76-KbF">
-                                <rect key="frame" x="25" y="100" width="363" height="201"/>
+                                <rect key="frame" x="25" y="112" width="363" height="201"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xl3-50-Vwr">
                                 <rect key="frame" x="25" y="186" width="101" height="24"/>
@@ -3479,7 +3484,7 @@ Other devices may be infected.
                             <constraint firstAttribute="trailingMargin" secondItem="b1f-76-KbF" secondAttribute="trailing" constant="6" id="rw4-3k-A6s"/>
                             <constraint firstItem="UmA-WQ-RtX" firstAttribute="leading" secondItem="124-wp-602" secondAttribute="leadingMargin" constant="5" id="tYf-ha-8ji"/>
                             <constraint firstItem="N8E-j5-uxq" firstAttribute="leading" secondItem="eK1-E6-k9b" secondAttribute="leading" id="uhF-US-ThI"/>
-                            <constraint firstItem="b1f-76-KbF" firstAttribute="top" secondItem="HLf-JV-e52" secondAttribute="bottom" constant="36" id="yXV-3Y-ERo"/>
+                            <constraint firstItem="b1f-76-KbF" firstAttribute="top" secondItem="HLf-JV-e52" secondAttribute="bottom" constant="48" id="yXV-3Y-ERo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gZI-oq-DcB">
@@ -3558,7 +3563,7 @@ Other devices may be infected.
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z1g-fl-3AC">
                                 <rect key="frame" x="85" y="589" width="303" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -3607,10 +3612,10 @@ Other devices may be infected.
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border" translatesAutoresizingMaskIntoConstraints="NO" id="3wJ-ai-28S">
-                                <rect key="frame" x="26" y="106" width="362" height="198"/>
+                                <rect key="frame" x="26" y="112" width="362" height="201"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5Z-Z7-fru">
-                                <rect key="frame" x="40" y="194" width="102" height="21"/>
+                                <rect key="frame" x="40" y="201.66666666666666" width="102" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ACY-zX-Ucv"/>
                                     <constraint firstAttribute="width" constant="102" id="Y8j-eq-3ih"/>
@@ -3620,7 +3625,7 @@ Other devices may be infected.
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3400" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DO-NR-5FV">
-                                <rect key="frame" x="166" y="180" width="214" height="48"/>
+                                <rect key="frame" x="166" y="187.66666666666666" width="214" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3648,7 +3653,7 @@ Other devices may be infected.
                             <constraint firstItem="3wJ-ai-28S" firstAttribute="centerX" secondItem="3sC-J7-Gsk" secondAttribute="centerX" id="Qwz-lI-DAP"/>
                             <constraint firstItem="I5Z-Z7-fru" firstAttribute="centerY" secondItem="2DO-NR-5FV" secondAttribute="centerY" id="Scq-ve-aIw"/>
                             <constraint firstItem="z1g-fl-3AC" firstAttribute="leading" secondItem="3up-jP-hhd" secondAttribute="trailing" constant="8" symbolic="YES" id="Yjw-aX-zIl"/>
-                            <constraint firstItem="I5Z-Z7-fru" firstAttribute="top" secondItem="g60-6E-LUK" secondAttribute="bottom" constant="130" id="Z4C-Yh-ysG"/>
+                            <constraint firstItem="I5Z-Z7-fru" firstAttribute="top" secondItem="g60-6E-LUK" secondAttribute="bottom" constant="135" id="Z4C-Yh-ysG"/>
                             <constraint firstItem="Di7-hR-10H" firstAttribute="trailing" secondItem="z1g-fl-3AC" secondAttribute="trailing" id="awL-hR-6te"/>
                             <constraint firstItem="3up-jP-hhd" firstAttribute="leading" secondItem="3sC-J7-Gsk" secondAttribute="leadingMargin" constant="15" id="c1p-eU-Ixb"/>
                             <constraint firstItem="9Gl-94-vDp" firstAttribute="top" secondItem="2Zp-zC-Wu5" secondAttribute="bottom" constant="11" id="ceG-gQ-xDY"/>
@@ -3658,8 +3663,13 @@ Other devices may be infected.
                             <constraint firstItem="2Zp-zC-Wu5" firstAttribute="centerX" secondItem="9Gl-94-vDp" secondAttribute="centerX" id="rOW-u6-yI6"/>
                             <constraint firstItem="2Zp-zC-Wu5" firstAttribute="leading" secondItem="3sC-J7-Gsk" secondAttribute="leadingMargin" constant="49" id="sM7-kz-TY4"/>
                             <constraint firstItem="z1g-fl-3AC" firstAttribute="trailing" secondItem="3Ll-Ls-nD8" secondAttribute="trailing" id="uox-Hc-LtW"/>
-                            <constraint firstItem="3wJ-ai-28S" firstAttribute="top" secondItem="g60-6E-LUK" secondAttribute="bottom" constant="42" id="zAh-gz-tss"/>
+                            <constraint firstItem="3wJ-ai-28S" firstAttribute="top" secondItem="g60-6E-LUK" secondAttribute="bottom" constant="48" id="zAh-gz-tss"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Z4C-Yh-ysG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="QtI-11-qjw">
                         <nil key="title"/>
@@ -3897,7 +3907,7 @@ Other devices may be infected.
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEWS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbP-wY-eFY">
-                                <rect key="frame" x="150.33333333333331" y="112" width="112.99999999999994" height="24"/>
+                                <rect key="frame" x="150.66666666666669" y="112" width="113.00000000000006" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="113" id="NA7-Ha-L9S"/>
                                     <constraint firstAttribute="height" constant="24" id="tLF-0W-5wN"/>
@@ -4546,7 +4556,7 @@ Other devices may be infected.
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlt-5Y-44G">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMING SOON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlt-5Y-44G">
                                 <rect key="frame" x="123" y="356" width="168" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rlt-5Y-44G" secondAttribute="height" multiplier="113:24" constant="55" id="7zw-8G-yZD"/>
@@ -4683,13 +4693,13 @@ Other devices may be infected.
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border" translatesAutoresizingMaskIntoConstraints="NO" id="0Zx-Zf-FZO">
-                                <rect key="frame" x="26" y="423" width="362" height="201"/>
+                                <rect key="frame" x="26" y="410" width="362" height="227"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border" translatesAutoresizingMaskIntoConstraints="NO" id="8W1-WM-8gu">
-                                <rect key="frame" x="26" y="136" width="362" height="190"/>
+                                <rect key="frame" x="26" y="112" width="362" height="201"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlG-pP-oNw">
-                                <rect key="frame" x="35" y="196" width="96" height="70"/>
+                                <rect key="frame" x="35" y="196" width="96" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="JaH-Yt-vwP"/>
                                 </constraints>
@@ -4698,7 +4708,7 @@ Other devices may be infected.
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygu-uZ-eTQ">
-                                <rect key="frame" x="162" y="180" width="216" height="102"/>
+                                <rect key="frame" x="162" y="180" width="216" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -4737,7 +4747,7 @@ Other devices may be infected.
                             <constraint firstItem="0Zx-Zf-FZO" firstAttribute="top" secondItem="8W1-WM-8gu" secondAttribute="bottom" constant="97" id="gLW-u0-GJ5"/>
                             <constraint firstItem="8W1-WM-8gu" firstAttribute="trailing" secondItem="0Zx-Zf-FZO" secondAttribute="trailing" id="hYd-Uw-1XQ"/>
                             <constraint firstItem="Ygu-uZ-eTQ" firstAttribute="leading" secondItem="YlG-pP-oNw" secondAttribute="trailing" constant="31" id="jG1-gw-9PB"/>
-                            <constraint firstItem="8W1-WM-8gu" firstAttribute="top" secondItem="Rmi-tb-KdL" secondAttribute="bottom" constant="72" id="kLn-G8-G8g"/>
+                            <constraint firstItem="8W1-WM-8gu" firstAttribute="top" secondItem="Rmi-tb-KdL" secondAttribute="bottom" constant="48" id="kLn-G8-G8g"/>
                             <constraint firstItem="0Zx-Zf-FZO" firstAttribute="centerY" secondItem="bvI-Hp-dJf" secondAttribute="centerY" constant="-11.5" id="mGY-va-f7h"/>
                             <constraint firstItem="YlG-pP-oNw" firstAttribute="leading" secondItem="5oW-B8-U0N" secondAttribute="leadingMargin" constant="15" id="nAI-bR-5Nh"/>
                             <constraint firstItem="Qpk-i4-pMS" firstAttribute="top" secondItem="yW3-F5-xpf" secondAttribute="bottom" constant="163" id="wrF-Ao-nMt"/>
@@ -4808,13 +4818,13 @@ Other devices may be infected.
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border" translatesAutoresizingMaskIntoConstraints="NO" id="NNm-fn-HCu">
-                                <rect key="frame" x="26" y="434" width="362" height="201"/>
+                                <rect key="frame" x="26" y="410" width="362" height="249"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border" translatesAutoresizingMaskIntoConstraints="NO" id="QEK-mO-302">
-                                <rect key="frame" x="26" y="136" width="362" height="201"/>
+                                <rect key="frame" x="26" y="112" width="362" height="201"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iY4-fg-q4v">
-                                <rect key="frame" x="35" y="196" width="96" height="81"/>
+                                <rect key="frame" x="35" y="196" width="96" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="mbB-hf-yVg"/>
                                 </constraints>
@@ -4823,7 +4833,7 @@ Other devices may be infected.
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3800" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQj-Ba-PCJ">
-                                <rect key="frame" x="162" y="180" width="216" height="113"/>
+                                <rect key="frame" x="162" y="180" width="216" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -4849,7 +4859,7 @@ Other devices may be infected.
                             <constraint firstItem="bRk-74-kns" firstAttribute="centerY" secondItem="Za2-OE-5he" secondAttribute="centerY" constant="-3" id="12w-cf-VqH"/>
                             <constraint firstItem="iY4-fg-q4v" firstAttribute="top" secondItem="pdR-tT-Neg" secondAttribute="bottom" constant="132" id="2Vy-re-9K0"/>
                             <constraint firstItem="iY4-fg-q4v" firstAttribute="centerY" secondItem="FQj-Ba-PCJ" secondAttribute="centerY" id="3Sm-yH-q1C"/>
-                            <constraint firstItem="QEK-mO-302" firstAttribute="top" secondItem="pdR-tT-Neg" secondAttribute="bottom" constant="72" id="5Vh-Tw-PhS"/>
+                            <constraint firstItem="QEK-mO-302" firstAttribute="top" secondItem="pdR-tT-Neg" secondAttribute="bottom" constant="48" id="5Vh-Tw-PhS"/>
                             <constraint firstItem="o5f-bZ-SPZ" firstAttribute="top" secondItem="bRk-74-kns" secondAttribute="bottom" constant="177" id="Akd-M5-Hyr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FQj-Ba-PCJ" secondAttribute="trailing" constant="16" id="Fhx-f3-2vN"/>
                             <constraint firstItem="FQj-Ba-PCJ" firstAttribute="top" secondItem="pdR-tT-Neg" secondAttribute="bottom" constant="116" id="HPy-Um-ZVY"/>

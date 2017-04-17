@@ -23,6 +23,9 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+
+// Updated by Farrukh Askari <farrukh.askari01@gmail.com> on 3:22 PM 17/4/17.
+
 import Foundation
 
 // BRHTTPIndexMiddleware returns index.html to any GET requests - regardless of the URL being requestd

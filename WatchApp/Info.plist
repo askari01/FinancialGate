@@ -28,7 +28,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>org.rizali.breadwallet</string>
+	<string>com.chiptag.financialgate</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

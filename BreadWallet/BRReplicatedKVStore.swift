@@ -24,6 +24,8 @@
 //  THE SOFTWARE.
 
 
+// Updated by Farrukh Askari <farrukh.askari01@gmail.com> on 3:22 PM 17/4/17.
+
 import Foundation
 
 public enum BRReplicatedKVStoreError: Error {

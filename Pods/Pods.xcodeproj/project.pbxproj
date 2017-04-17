@@ -1,0 +1,1772 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		023622C82EEB1452B670BF25BA95D5DB /* IQPreviousNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C15DC91CD486208825B85485B0B00F8 /* IQPreviousNextView.m */; };
+		069FCC7E71C36B74F33D5E5A61B29DDE /* IQBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC46B73405F15E30F258E0E242BD3195 /* IQBarButtonItem.m */; };
+		06ECA12A57D0B1EFDE59F44EA9A2E3E4 /* Pods-TodayExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 779D842613747BF0E1EC927D82799AAC /* Pods-TodayExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BE2F7B0818A0D71D7E3D55955B2E95C /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = CB01C1297440515DA88B6B4AE86D7A5F /* IQNSArray+Sort.m */; };
+		0F9105ED9E7F4DA500277C4DAA6AB2BD /* Pods-WatchApp Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39EBD6226345C8079F6817304A7B73E3 /* Pods-WatchApp Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		152922B5EC32859523F849B93347F246 /* IQKeyboardManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9410884F534E4741954C235EE794EDF /* IQKeyboardManager-dummy.m */; };
+		197F7FD27FE6E1710EC10D982FDF9130 /* Pods-WatchApp Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B3C51A0B640EC4DEAAA20ED2505F64 /* Pods-WatchApp Extension-dummy.m */; };
+		205D7F14403318E3F6184F47E8D2BB08 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECEDFD88A146224DD396D4BADA25B26 /* IQToolbar.m */; };
+		21A8C0B8B9462D155109FC484470AB03 /* IQKeyboardReturnKeyHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 96C1904322078CB7B8F1CDC8ABA697CB /* IQKeyboardReturnKeyHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2786F7B7514EF72F8C2477AE7E1C543C /* IQKeyboardManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 49EA6001D58E9B4AB8487F6906159B6C /* IQKeyboardManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B845606EB8BE11829F4B98D8051DBE3 /* IQKeyboardManagerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FE7955CE84A25E8A3638329D1B79CDC /* IQKeyboardManagerConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4966448A291C2920D096EC64A90FFC44 /* IQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2472ECC83BF104AE7026F0B7E816F2C0 /* IQTextView.m */; };
+		4E88995F98033E6C05078C98D09837A4 /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = A85D95AE8C82DE39E95B91E1DC71CC51 /* IQUITextFieldView+Additions.m */; };
+		4FB3167D09122AF3EE564FB4147EB902 /* IQUIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 622C39A05CD79DAC62C139C54A2CA22B /* IQUIWindow+Hierarchy.m */; };
+		535693E3F93988683FB5C91A785D75DB /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5005437EADE20F723DB76D22D6576841 /* IQKeyboardManager.m */; };
+		543280D90A95912AD8187872C0B849CA /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 033D8AA8997113635F9535EC2D061040 /* IQTitleBarButtonItem.m */; };
+		58F2BDCAC43475DB387DE03E6C6F9E2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C166F2024AB1BFE5E8F7D5C1357D788C /* Foundation.framework */; };
+		5A5A0939B6C0CD6AA2E0145E7743D22F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD825AE4FB7CFA5697713AD3A20FFDC /* Foundation.framework */; };
+		5BDE5823778595155808CA0DDD81A14F /* Pods-breadwallet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED3BE5DBB9ABC3CBC4E2BF33387DA835 /* Pods-breadwallet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EF737B4D269FE3457482B83602EC327 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD825AE4FB7CFA5697713AD3A20FFDC /* Foundation.framework */; };
+		611269F1AEC2D87577A1F237DD235FA6 /* Pods-TodayExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B26923BF0BCABA5A153ADC343D42FA21 /* Pods-TodayExtension-dummy.m */; };
+		6734725DE2379E96FC60785098E2FB39 /* IQTitleBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 326B06E697170E48D291CCAB5B194756 /* IQTitleBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69E697DC728B3EF5AC157B467B6E1B74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C166F2024AB1BFE5E8F7D5C1357D788C /* Foundation.framework */; };
+		6DF2B4997CA1899134F950CCDB81FAA1 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BA44BEF27031AC61066FBB1313AC6E3 /* IQKeyboardManager.bundle */; };
+		6E62E8D91C29477A16EC7DC71B67F80C /* IQPreviousNextView.h in Headers */ = {isa = PBXBuildFile; fileRef = FBAA27AE856995F1CDD714E88F8ECDCD /* IQPreviousNextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72D7B2B3BD1CB895430C9A4CD766B4D9 /* Pods-BreadWalletUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7745EB86BCE933B6F1A2CB0B41B70C /* Pods-BreadWalletUITests-dummy.m */; };
+		7718A6CCF6F5A68F86F54B0A24D9C0D8 /* IQTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B5A8B8566C861513B180E6D05A4F52 /* IQTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79CA0EFB765EC17688AA2F6A0DA50CA5 /* Pods-BreadWalletUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC8FCB250D46692117DFE0F3891F8025 /* Pods-BreadWalletUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82637BC62DD399A757E546D4FB6864A1 /* IQToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = B2BE1C754736B510FEFE3C9FA64E05DB /* IQToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C086B7B067A03891615F5E648621D35 /* IQUIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCAEC5B0E2F1338DE967D2121AD620 /* IQUIViewController+Additions.m */; };
+		98157A56868DBFFA2307E2412A554E91 /* IQUIView+Hierarchy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CBDDBB93124188EDACB9CE56DF0AD77 /* IQUIView+Hierarchy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B90FE1C9CF33C83E2F34ED3D0F532D7 /* IQUIScrollView+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 864ACB08131AD9FF9D51FA43BC853655 /* IQUIScrollView+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A006DBB78EFECCB514645F9E1240E833 /* Pods-BreadWalletTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4B9BB1F9BE8B6DE4D031D2682F92205 /* Pods-BreadWalletTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6DC65A256DC4C9215FA524AE27FD944 /* IQUIViewController+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = A25EB4FF16E3F9D10971A51D4DEC0C0E /* IQUIViewController+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A93F7338F61F53B1111E1B6B64015311 /* Pods-breadwallet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227DF314F977E2295758B6D58B5E59B /* Pods-breadwallet-dummy.m */; };
+		A9D536EE10BCDA123C826EA5C0B48C6B /* IQUIView+IQKeyboardToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C2F52C991E8610B08A1FA60292329C4 /* IQUIView+IQKeyboardToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACFBBB994C6E9F2C6B822B51AF2DB0FA /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A746B4F4DD70EE9FEAC125F52AD9AD1 /* IQUIScrollView+Additions.m */; };
+		B568BE459A2F790F792C6B91430DCB77 /* Pods-WatchApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 407B241B60E32029DD91BAEE3701060F /* Pods-WatchApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B732F9603399E38A5E22CC6D53F9349F /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BC31958BDCEB68025875697D52D44FC1 /* IQKeyboardReturnKeyHandler.m */; };
+		BBC5FF7B4CD4050E2F9CD71C59CD1D6C /* Pods-BreadWalletTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B896BBAD83908D22533BB2021A3116 /* Pods-BreadWalletTests-dummy.m */; };
+		C0C7914142A7DAAFE1E595B5899C57E1 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 027F47F140C6533212E81C1308BC4283 /* IQUIView+IQKeyboardToolbar.m */; };
+		C1E531769B0733E5207F75C41ACA56E4 /* IQKeyboardManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B24A2D46C7D240422DAACF5B537FD77B /* IQKeyboardManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C51F6375C522A9FD0F94CD1058390A43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038AEA9241DE2FAC0660DB66150F5BA7 /* CoreGraphics.framework */; };
+		C8A4067C8B1AB6208A6BE77BB26DEC6D /* Pods-WatchApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A8753847AE515A450F9F90DE9A3165 /* Pods-WatchApp-dummy.m */; };
+		C940DAD70C5E5FD35A49B437CC9AA8A9 /* IQBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B6C4F269F6E647223486ECA5E51A3C3 /* IQBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D42912BFDD850823566ACBAAE7931ADA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD825AE4FB7CFA5697713AD3A20FFDC /* Foundation.framework */; };
+		DAAF3533F408D1DFE6AA6C10F262BF6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD825AE4FB7CFA5697713AD3A20FFDC /* Foundation.framework */; };
+		DBB996FDBB616A7865A1209CB78B2424 /* IQUIWindow+Hierarchy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C291F74107C277BE63BF3A86CBE2B18 /* IQUIWindow+Hierarchy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E197EDCA2DC3165631941A0AAD1EF132 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD825AE4FB7CFA5697713AD3A20FFDC /* Foundation.framework */; };
+		E8C199345E9BF9CD78B8DC725B1E548C /* IQUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 879CB55F3E503D673F59EC0B73CBE07C /* IQUIView+Hierarchy.m */; };
+		EC0E1DE220030BD0AC693CBB16AE9D3B /* IQUITextFieldView+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E54F97511FA7FAA91CBC163BEEBE45C /* IQUITextFieldView+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F18E3AB6AFB1D7A638A6A996B6BAC0A4 /* IQNSArray+Sort.h in Headers */ = {isa = PBXBuildFile; fileRef = 189C90B4304A11836FB4A40C795B1E30 /* IQNSArray+Sort.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F92DB05893BF5D5DE38974C1E722BAF4 /* IQKeyboardManagerConstantsInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = FC74225F07D4EB3F2ACC367CBC04DDF0 /* IQKeyboardManagerConstantsInternal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD5C42B4DA64C38A3090A093482ABF3B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C143B2FDAB80BC8948A50A8895EAC23 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF79531260D9998B939E9C7D9336D210 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26C349A59FC430474782CDDED2A2129C;
+			remoteInfo = IQKeyboardManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0087650BB7BE331085253C6FC09B0AA9 /* Pods-WatchApp Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WatchApp Extension-resources.sh"; sourceTree = "<group>"; };
+		01A28CDAE8D34E56A5D9613B35A39138 /* Pods-BreadWalletUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BreadWalletUITests-resources.sh"; sourceTree = "<group>"; };
+		027F47F140C6533212E81C1308BC4283 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIView+IQKeyboardToolbar.m"; path = "IQKeyboardManager/IQToolbar/IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
+		033D8AA8997113635F9535EC2D061040 /* IQTitleBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQTitleBarButtonItem.m; path = IQKeyboardManager/IQToolbar/IQTitleBarButtonItem.m; sourceTree = "<group>"; };
+		038AEA9241DE2FAC0660DB66150F5BA7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		07C6669C09F7F6392973C8C3E3CAEF94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A7745EB86BCE933B6F1A2CB0B41B70C /* Pods-BreadWalletUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BreadWalletUITests-dummy.m"; sourceTree = "<group>"; };
+		0AD825AE4FB7CFA5697713AD3A20FFDC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0B6C4F269F6E647223486ECA5E51A3C3 /* IQBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQBarButtonItem.h; path = IQKeyboardManager/IQToolbar/IQBarButtonItem.h; sourceTree = "<group>"; };
+		0C2F52C991E8610B08A1FA60292329C4 /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIView+IQKeyboardToolbar.h"; path = "IQKeyboardManager/IQToolbar/IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
+		0C84428DBD2F5DB02BD931510AF1C848 /* Pods-BreadWalletUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BreadWalletUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0CBDDBB93124188EDACB9CE56DF0AD77 /* IQUIView+Hierarchy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIView+Hierarchy.h"; path = "IQKeyboardManager/Categories/IQUIView+Hierarchy.h"; sourceTree = "<group>"; };
+		0D242499147EB778CE1D6289EDF83005 /* Pods-WatchApp.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WatchApp.testflight.xcconfig"; sourceTree = "<group>"; };
+		124D943B35F7C030ABD442BF51251CEE /* Pods-BreadWalletTests.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreadWalletTests.testflight.xcconfig"; sourceTree = "<group>"; };
+		189C90B4304A11836FB4A40C795B1E30 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQNSArray+Sort.h"; path = "IQKeyboardManager/Categories/IQNSArray+Sort.h"; sourceTree = "<group>"; };
+		1BA44BEF27031AC61066FBB1313AC6E3 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IQKeyboardManager.bundle; path = IQKeyboardManager/Resources/IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		1C291F74107C277BE63BF3A86CBE2B18 /* IQUIWindow+Hierarchy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIWindow+Hierarchy.h"; path = "IQKeyboardManager/Categories/IQUIWindow+Hierarchy.h"; sourceTree = "<group>"; };
+		2472ECC83BF104AE7026F0B7E816F2C0 /* IQTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQTextView.m; path = IQKeyboardManager/IQTextView/IQTextView.m; sourceTree = "<group>"; };
+		25E3D18279873CD79371328FAA4FC211 /* Pods-TodayExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TodayExtension-acknowledgements.plist"; sourceTree = "<group>"; };
+		264B47A33ED062DA41933A37E0BA9C06 /* Pods-WatchApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WatchApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		27F3F344AE8F67D2FBE15D4E2E3C0161 /* Pods-BreadWalletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreadWalletUITests.release.xcconfig"; sourceTree = "<group>"; };
+		290F7289CD50236188DE133452D03EAE /* IQKeyboardManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManager.xcconfig; sourceTree = "<group>"; };
+		29B3C51A0B640EC4DEAAA20ED2505F64 /* Pods-WatchApp Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WatchApp Extension-dummy.m"; sourceTree = "<group>"; };
+		2BDD1CCA0EF5B1DE7E6FDD13C2DC1CBF /* Pods-BreadWalletTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BreadWalletTests.modulemap"; sourceTree = "<group>"; };
+		2BE9DBEC21667CFEFBFB72C7AC986F94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D56D5EC16A9EE18CF88CB7B62622811 /* Pods-BreadWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreadWalletTests.release.xcconfig"; sourceTree = "<group>"; };
+		3209DFBB1CE3E6D97D6F7D5D2E9E53FE /* Pods-TodayExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TodayExtension.release.xcconfig"; sourceTree = "<group>"; };
+		326B06E697170E48D291CCAB5B194756 /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQTitleBarButtonItem.h; path = IQKeyboardManager/IQToolbar/IQTitleBarButtonItem.h; sourceTree = "<group>"; };
+		32A0FFFEC8A4C15B073AC9C423569B57 /* Pods-BreadWalletUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BreadWalletUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		38B5A8B8566C861513B180E6D05A4F52 /* IQTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQTextView.h; path = IQKeyboardManager/IQTextView/IQTextView.h; sourceTree = "<group>"; };
+		39EBD6226345C8079F6817304A7B73E3 /* Pods-WatchApp Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WatchApp Extension-umbrella.h"; sourceTree = "<group>"; };
+		3C143B2FDAB80BC8948A50A8895EAC23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		407B241B60E32029DD91BAEE3701060F /* Pods-WatchApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WatchApp-umbrella.h"; sourceTree = "<group>"; };
+		43B896BBAD83908D22533BB2021A3116 /* Pods-BreadWalletTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BreadWalletTests-dummy.m"; sourceTree = "<group>"; };
+		49EA6001D58E9B4AB8487F6906159B6C /* IQKeyboardManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManager.h; path = IQKeyboardManager/IQKeyboardManager.h; sourceTree = "<group>"; };
+		4A7DDCC9C8F646066470E9158D487D5D /* Pods-WatchApp Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WatchApp Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		4C15DC91CD486208825B85485B0B00F8 /* IQPreviousNextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQPreviousNextView.m; path = IQKeyboardManager/IQToolbar/IQPreviousNextView.m; sourceTree = "<group>"; };
+		4CFCBE983548808E77CBD77317B1174F /* Pods-WatchApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WatchApp-frameworks.sh"; sourceTree = "<group>"; };
+		5005437EADE20F723DB76D22D6576841 /* IQKeyboardManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQKeyboardManager.m; path = IQKeyboardManager/IQKeyboardManager.m; sourceTree = "<group>"; };
+		500D1C755EC302078D9E1B002BDC3029 /* IQKeyboardManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IQKeyboardManager.modulemap; sourceTree = "<group>"; };
+		5227DF314F977E2295758B6D58B5E59B /* Pods-breadwallet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-breadwallet-dummy.m"; sourceTree = "<group>"; };
+		54FCEBEC6B1A717DE0941356C3ABC77B /* Pods_WatchApp_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WatchApp_Extension.framework; path = "Pods-WatchApp Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		555B7BD6DA399CF1C06A841B5C212A3E /* Pods-WatchApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WatchApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		586E9889FF842E655A0683C6BC1F1E04 /* Pods-WatchApp Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WatchApp Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5F32521E2AE84B6805CF37E703DEA29D /* Pods-TodayExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TodayExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		621F8EC4CF04765ACEBD378A731F4E29 /* Pods-BreadWalletTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BreadWalletTests-frameworks.sh"; sourceTree = "<group>"; };
+		622C39A05CD79DAC62C139C54A2CA22B /* IQUIWindow+Hierarchy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIWindow+Hierarchy.m"; path = "IQKeyboardManager/Categories/IQUIWindow+Hierarchy.m"; sourceTree = "<group>"; };
+		6E54F97511FA7FAA91CBC163BEEBE45C /* IQUITextFieldView+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUITextFieldView+Additions.h"; path = "IQKeyboardManager/Categories/IQUITextFieldView+Additions.h"; sourceTree = "<group>"; };
+		6EBB91F2D3F649972FCD4DE269D23F0C /* Pods-breadwallet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-breadwallet.modulemap"; sourceTree = "<group>"; };
+		70CFDAF1B78534BEB53A883277BA9E4B /* Pods-WatchApp Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WatchApp Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		759A3FA0894D6DE0E260338007937D80 /* Pods-breadwallet-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-breadwallet-acknowledgements.plist"; sourceTree = "<group>"; };
+		779D842613747BF0E1EC927D82799AAC /* Pods-TodayExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TodayExtension-umbrella.h"; sourceTree = "<group>"; };
+		7FE7955CE84A25E8A3638329D1B79CDC /* IQKeyboardManagerConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManagerConstants.h; path = IQKeyboardManager/Constants/IQKeyboardManagerConstants.h; sourceTree = "<group>"; };
+		80FDCCA980997809E1B8633A4511315E /* Pods-breadwallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-breadwallet.release.xcconfig"; sourceTree = "<group>"; };
+		864ACB08131AD9FF9D51FA43BC853655 /* IQUIScrollView+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIScrollView+Additions.h"; path = "IQKeyboardManager/Categories/IQUIScrollView+Additions.h"; sourceTree = "<group>"; };
+		879CB55F3E503D673F59EC0B73CBE07C /* IQUIView+Hierarchy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIView+Hierarchy.m"; path = "IQKeyboardManager/Categories/IQUIView+Hierarchy.m"; sourceTree = "<group>"; };
+		8A746B4F4DD70EE9FEAC125F52AD9AD1 /* IQUIScrollView+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIScrollView+Additions.m"; path = "IQKeyboardManager/Categories/IQUIScrollView+Additions.m"; sourceTree = "<group>"; };
+		8BCCAEC5B0E2F1338DE967D2121AD620 /* IQUIViewController+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIViewController+Additions.m"; path = "IQKeyboardManager/Categories/IQUIViewController+Additions.m"; sourceTree = "<group>"; };
+		8D127E2AA6F682C6E95553F6EBA38080 /* Pods-breadwallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-breadwallet.debug.xcconfig"; sourceTree = "<group>"; };
+		8E4717A5235B08F7418FCC7607489FAD /* Pods-TodayExtension.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TodayExtension.testflight.xcconfig"; sourceTree = "<group>"; };
+		8F55D4A1B01241BAAF287D23BAD1E96D /* Pods-breadwallet-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-breadwallet-acknowledgements.markdown"; sourceTree = "<group>"; };
+		91A8753847AE515A450F9F90DE9A3165 /* Pods-WatchApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WatchApp-dummy.m"; sourceTree = "<group>"; };
+		925C54A187EACE899A3CA719C8173935 /* Pods_TodayExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TodayExtension.framework; path = "Pods-TodayExtension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93BF3B798271B21F9F1126D7E419D6FC /* Pods-TodayExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TodayExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		96C1904322078CB7B8F1CDC8ABA697CB /* IQKeyboardReturnKeyHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardReturnKeyHandler.h; path = IQKeyboardManager/IQKeyboardReturnKeyHandler.h; sourceTree = "<group>"; };
+		994F8AE593D1C6F9EEF57D607E87BDC3 /* Pods-WatchApp Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WatchApp Extension.release.xcconfig"; sourceTree = "<group>"; };
+		9B1C3C364C1812141A54269BA3539146 /* Pods-WatchApp Extension.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WatchApp Extension.testflight.xcconfig"; sourceTree = "<group>"; };
+		9D79A6DD055A4DCD25B664894D796441 /* Pods-BreadWalletUITests.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreadWalletUITests.testflight.xcconfig"; sourceTree = "<group>"; };
+		9E9A526FDBCF93FE3EBF54BE86FF1FEE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ECEDFD88A146224DD396D4BADA25B26 /* IQToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQToolbar.m; path = IQKeyboardManager/IQToolbar/IQToolbar.m; sourceTree = "<group>"; };
+		A22799CBCA11CDB64FE96C3719F8F749 /* IQKeyboardManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManager-prefix.pch"; sourceTree = "<group>"; };
+		A25EB4FF16E3F9D10971A51D4DEC0C0E /* IQUIViewController+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIViewController+Additions.h"; path = "IQKeyboardManager/Categories/IQUIViewController+Additions.h"; sourceTree = "<group>"; };
+		A33376193B650CF864745EE44CE69370 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A85D95AE8C82DE39E95B91E1DC71CC51 /* IQUITextFieldView+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUITextFieldView+Additions.m"; path = "IQKeyboardManager/Categories/IQUITextFieldView+Additions.m"; sourceTree = "<group>"; };
+		AB7774BE2F317DB1D0710CF3A1BFFDE4 /* Pods-TodayExtension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TodayExtension-resources.sh"; sourceTree = "<group>"; };
+		AFD746DBE27D71AAFAC931F13ED66092 /* Pods-breadwallet.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-breadwallet.testflight.xcconfig"; sourceTree = "<group>"; };
+		B008616BC396F0B7915EA6EAB5981451 /* Pods-WatchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WatchApp.release.xcconfig"; sourceTree = "<group>"; };
+		B24A2D46C7D240422DAACF5B537FD77B /* IQKeyboardManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManager-umbrella.h"; sourceTree = "<group>"; };
+		B26923BF0BCABA5A153ADC343D42FA21 /* Pods-TodayExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TodayExtension-dummy.m"; sourceTree = "<group>"; };
+		B2BE1C754736B510FEFE3C9FA64E05DB /* IQToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQToolbar.h; path = IQKeyboardManager/IQToolbar/IQToolbar.h; sourceTree = "<group>"; };
+		B4B9BB1F9BE8B6DE4D031D2682F92205 /* Pods-BreadWalletTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BreadWalletTests-umbrella.h"; sourceTree = "<group>"; };
+		B5F31B43CA07C539DA77BD24C0B8055C /* Pods_WatchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WatchApp.framework; path = "Pods-WatchApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9302CB0042B2FA7BC305585284C6E9A /* Pods-BreadWalletTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BreadWalletTests-resources.sh"; sourceTree = "<group>"; };
+		BC31958BDCEB68025875697D52D44FC1 /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQKeyboardReturnKeyHandler.m; path = IQKeyboardManager/IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
+		BC46B73405F15E30F258E0E242BD3195 /* IQBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQBarButtonItem.m; path = IQKeyboardManager/IQToolbar/IQBarButtonItem.m; sourceTree = "<group>"; };
+		BECD3E4000B8DE30B164C10CA4E65008 /* Pods_BreadWalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BreadWalletTests.framework; path = "Pods-BreadWalletTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C166F2024AB1BFE5E8F7D5C1357D788C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C32EFAA8F50CFC43E7812EF24905A64F /* Pods-breadwallet-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-breadwallet-resources.sh"; sourceTree = "<group>"; };
+		C37B8B254F2CC637631D2BC6CECBDD38 /* Pods-BreadWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreadWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C403C9E5B5FCBF75581051D47DF1880D /* Pods-BreadWalletUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BreadWalletUITests-frameworks.sh"; sourceTree = "<group>"; };
+		C47DDF439ED2FB52F8B7EFBA0B3A0D1B /* Pods-WatchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WatchApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C59E3421AB88021BB739450A759A1754 /* Pods-TodayExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TodayExtension.modulemap"; sourceTree = "<group>"; };
+		C5C76CF6CE44A17EB4A4B1700560913B /* Pods-WatchApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WatchApp.modulemap"; sourceTree = "<group>"; };
+		C614929243E5C7A792C244C58C7F2F0B /* Pods-BreadWalletTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BreadWalletTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CB01C1297440515DA88B6B4AE86D7A5F /* IQNSArray+Sort.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQNSArray+Sort.m"; path = "IQKeyboardManager/Categories/IQNSArray+Sort.m"; sourceTree = "<group>"; };
+		CE6205B75D7901987D8C3E19526F61A9 /* Pods-BreadWalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreadWalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D367709DF70ACE7A0F4CCBB3B43B3BEA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8B9209DE14F4A1A60D1D5794BFEBC04 /* Pods_breadwallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_breadwallet.framework; path = "Pods-breadwallet.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8D4E13B096281088343353DCBD9AD1D /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManager.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC8FCB250D46692117DFE0F3891F8025 /* Pods-BreadWalletUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BreadWalletUITests-umbrella.h"; sourceTree = "<group>"; };
+		DE4E2F81E1895CD3789533106620FDBB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEF1690E7660283BF9AF2355BC90E4F7 /* Pods-BreadWalletUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BreadWalletUITests.modulemap"; sourceTree = "<group>"; };
+		E1D058D294FDC742FDE6FC9D6DFF2105 /* Pods_BreadWalletUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BreadWalletUITests.framework; path = "Pods-BreadWalletUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB276ACC4D2851A11007A6BB90B34D06 /* Pods-BreadWalletTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BreadWalletTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		ECFDAF2212EF1907240E05A97F7412E9 /* Pods-WatchApp Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WatchApp Extension.modulemap"; sourceTree = "<group>"; };
+		ED3BE5DBB9ABC3CBC4E2BF33387DA835 /* Pods-breadwallet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-breadwallet-umbrella.h"; sourceTree = "<group>"; };
+		F414042024ED033A3F84F2CDF46AFD6C /* Pods-breadwallet-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-breadwallet-frameworks.sh"; sourceTree = "<group>"; };
+		F44FD527845249E45BB0476D6278764C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7A241374AD139658FD688E8E3270A16 /* Pods-WatchApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WatchApp-resources.sh"; sourceTree = "<group>"; };
+		F9410884F534E4741954C235EE794EDF /* IQKeyboardManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManager-dummy.m"; sourceTree = "<group>"; };
+		FBAA27AE856995F1CDD714E88F8ECDCD /* IQPreviousNextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQPreviousNextView.h; path = IQKeyboardManager/IQToolbar/IQPreviousNextView.h; sourceTree = "<group>"; };
+		FC74225F07D4EB3F2ACC367CBC04DDF0 /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManagerConstantsInternal.h; path = IQKeyboardManager/Constants/IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
+		FD9D024D999E4A37F6BEF94C8F8584FC /* Pods-WatchApp Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WatchApp Extension-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3750AB5BDDAA26CD907DF141CD21CEDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42912BFDD850823566ACBAAE7931ADA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40D21053DB6FFDD99C3DD675ACA4366C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69E697DC728B3EF5AC157B467B6E1B74 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F71E8026CA01E069AB6E5B948F14DDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E197EDCA2DC3165631941A0AAD1EF132 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89DD908492A30C41AE9FCAC2509EEA97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EF737B4D269FE3457482B83602EC327 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DC4A73903DB018AAF7006948EAAABD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58F2BDCAC43475DB387DE03E6C6F9E2C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3B507A30E397D2F3BB2A0641B56B457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAF3533F408D1DFE6AA6C10F262BF6D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97234170AE76237452A86445B505995 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51F6375C522A9FD0F94CD1058390A43 /* CoreGraphics.framework in Frameworks */,
+				5A5A0939B6C0CD6AA2E0145E7743D22F /* Foundation.framework in Frameworks */,
+				FD5C42B4DA64C38A3090A093482ABF3B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1821D18D5B6371D64E9E79C2D1E492FE /* Pods-BreadWalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A33376193B650CF864745EE44CE69370 /* Info.plist */,
+				DEF1690E7660283BF9AF2355BC90E4F7 /* Pods-BreadWalletUITests.modulemap */,
+				0C84428DBD2F5DB02BD931510AF1C848 /* Pods-BreadWalletUITests-acknowledgements.markdown */,
+				32A0FFFEC8A4C15B073AC9C423569B57 /* Pods-BreadWalletUITests-acknowledgements.plist */,
+				0A7745EB86BCE933B6F1A2CB0B41B70C /* Pods-BreadWalletUITests-dummy.m */,
+				C403C9E5B5FCBF75581051D47DF1880D /* Pods-BreadWalletUITests-frameworks.sh */,
+				01A28CDAE8D34E56A5D9613B35A39138 /* Pods-BreadWalletUITests-resources.sh */,
+				DC8FCB250D46692117DFE0F3891F8025 /* Pods-BreadWalletUITests-umbrella.h */,
+				CE6205B75D7901987D8C3E19526F61A9 /* Pods-BreadWalletUITests.debug.xcconfig */,
+				27F3F344AE8F67D2FBE15D4E2E3C0161 /* Pods-BreadWalletUITests.release.xcconfig */,
+				9D79A6DD055A4DCD25B664894D796441 /* Pods-BreadWalletUITests.testflight.xcconfig */,
+			);
+			name = "Pods-BreadWalletUITests";
+			path = "Target Support Files/Pods-BreadWalletUITests";
+			sourceTree = "<group>";
+		};
+		1A6A308702EB928EE7BFCC75C70946CC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D367709DF70ACE7A0F4CCBB3B43B3BEA /* Info.plist */,
+				500D1C755EC302078D9E1B002BDC3029 /* IQKeyboardManager.modulemap */,
+				290F7289CD50236188DE133452D03EAE /* IQKeyboardManager.xcconfig */,
+				F9410884F534E4741954C235EE794EDF /* IQKeyboardManager-dummy.m */,
+				A22799CBCA11CDB64FE96C3719F8F749 /* IQKeyboardManager-prefix.pch */,
+				B24A2D46C7D240422DAACF5B537FD77B /* IQKeyboardManager-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IQKeyboardManager";
+			sourceTree = "<group>";
+		};
+		2934664B701BA7BDE2770B570B7ABAB2 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7243D9129CD31C224BE3FA7EE11634F1 /* Pods-breadwallet */,
+				C0BB2AA45C9DDD1099A18D7461207CE1 /* Pods-BreadWalletTests */,
+				1821D18D5B6371D64E9E79C2D1E492FE /* Pods-BreadWalletUITests */,
+				CF1F2314F735712350C10D1AAFE6DB61 /* Pods-TodayExtension */,
+				5886CE7730AA66F72FFC1EC9E5D5EB29 /* Pods-WatchApp */,
+				380A393C795138832E935C72921B9027 /* Pods-WatchApp Extension */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		380A393C795138832E935C72921B9027 /* Pods-WatchApp Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DE4E2F81E1895CD3789533106620FDBB /* Info.plist */,
+				ECFDAF2212EF1907240E05A97F7412E9 /* Pods-WatchApp Extension.modulemap */,
+				586E9889FF842E655A0683C6BC1F1E04 /* Pods-WatchApp Extension-acknowledgements.markdown */,
+				4A7DDCC9C8F646066470E9158D487D5D /* Pods-WatchApp Extension-acknowledgements.plist */,
+				29B3C51A0B640EC4DEAAA20ED2505F64 /* Pods-WatchApp Extension-dummy.m */,
+				FD9D024D999E4A37F6BEF94C8F8584FC /* Pods-WatchApp Extension-frameworks.sh */,
+				0087650BB7BE331085253C6FC09B0AA9 /* Pods-WatchApp Extension-resources.sh */,
+				39EBD6226345C8079F6817304A7B73E3 /* Pods-WatchApp Extension-umbrella.h */,
+				70CFDAF1B78534BEB53A883277BA9E4B /* Pods-WatchApp Extension.debug.xcconfig */,
+				994F8AE593D1C6F9EEF57D607E87BDC3 /* Pods-WatchApp Extension.release.xcconfig */,
+				9B1C3C364C1812141A54269BA3539146 /* Pods-WatchApp Extension.testflight.xcconfig */,
+			);
+			name = "Pods-WatchApp Extension";
+			path = "Target Support Files/Pods-WatchApp Extension";
+			sourceTree = "<group>";
+		};
+		3CE9B26FBD74C7B8A142ED7EAAB40362 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1BA44BEF27031AC61066FBB1313AC6E3 /* IQKeyboardManager.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		40E639630B04AC07E6DACD80EB35AF2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8D4E13B096281088343353DCBD9AD1D /* IQKeyboardManager.framework */,
+				D8B9209DE14F4A1A60D1D5794BFEBC04 /* Pods_breadwallet.framework */,
+				BECD3E4000B8DE30B164C10CA4E65008 /* Pods_BreadWalletTests.framework */,
+				E1D058D294FDC742FDE6FC9D6DFF2105 /* Pods_BreadWalletUITests.framework */,
+				925C54A187EACE899A3CA719C8173935 /* Pods_TodayExtension.framework */,
+				B5F31B43CA07C539DA77BD24C0B8055C /* Pods_WatchApp.framework */,
+				54FCEBEC6B1A717DE0941356C3ABC77B /* Pods_WatchApp_Extension.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5886CE7730AA66F72FFC1EC9E5D5EB29 /* Pods-WatchApp */ = {
+			isa = PBXGroup;
+			children = (
+				9E9A526FDBCF93FE3EBF54BE86FF1FEE /* Info.plist */,
+				C5C76CF6CE44A17EB4A4B1700560913B /* Pods-WatchApp.modulemap */,
+				264B47A33ED062DA41933A37E0BA9C06 /* Pods-WatchApp-acknowledgements.markdown */,
+				555B7BD6DA399CF1C06A841B5C212A3E /* Pods-WatchApp-acknowledgements.plist */,
+				91A8753847AE515A450F9F90DE9A3165 /* Pods-WatchApp-dummy.m */,
+				4CFCBE983548808E77CBD77317B1174F /* Pods-WatchApp-frameworks.sh */,
+				F7A241374AD139658FD688E8E3270A16 /* Pods-WatchApp-resources.sh */,
+				407B241B60E32029DD91BAEE3701060F /* Pods-WatchApp-umbrella.h */,
+				C47DDF439ED2FB52F8B7EFBA0B3A0D1B /* Pods-WatchApp.debug.xcconfig */,
+				B008616BC396F0B7915EA6EAB5981451 /* Pods-WatchApp.release.xcconfig */,
+				0D242499147EB778CE1D6289EDF83005 /* Pods-WatchApp.testflight.xcconfig */,
+			);
+			name = "Pods-WatchApp";
+			path = "Target Support Files/Pods-WatchApp";
+			sourceTree = "<group>";
+		};
+		7243D9129CD31C224BE3FA7EE11634F1 /* Pods-breadwallet */ = {
+			isa = PBXGroup;
+			children = (
+				F44FD527845249E45BB0476D6278764C /* Info.plist */,
+				6EBB91F2D3F649972FCD4DE269D23F0C /* Pods-breadwallet.modulemap */,
+				8F55D4A1B01241BAAF287D23BAD1E96D /* Pods-breadwallet-acknowledgements.markdown */,
+				759A3FA0894D6DE0E260338007937D80 /* Pods-breadwallet-acknowledgements.plist */,
+				5227DF314F977E2295758B6D58B5E59B /* Pods-breadwallet-dummy.m */,
+				F414042024ED033A3F84F2CDF46AFD6C /* Pods-breadwallet-frameworks.sh */,
+				C32EFAA8F50CFC43E7812EF24905A64F /* Pods-breadwallet-resources.sh */,
+				ED3BE5DBB9ABC3CBC4E2BF33387DA835 /* Pods-breadwallet-umbrella.h */,
+				8D127E2AA6F682C6E95553F6EBA38080 /* Pods-breadwallet.debug.xcconfig */,
+				80FDCCA980997809E1B8633A4511315E /* Pods-breadwallet.release.xcconfig */,
+				AFD746DBE27D71AAFAC931F13ED66092 /* Pods-breadwallet.testflight.xcconfig */,
+			);
+			name = "Pods-breadwallet";
+			path = "Target Support Files/Pods-breadwallet";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				97E811D73B8632F57466A1B09AAA4E66 /* Frameworks */,
+				F5B7B38589327481A51D59AED1FBFCD1 /* Pods */,
+				40E639630B04AC07E6DACD80EB35AF2C /* Products */,
+				2934664B701BA7BDE2770B570B7ABAB2 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		97E811D73B8632F57466A1B09AAA4E66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC9BD16E065DEC1EA1710D871DED9AF5 /* iOS */,
+				F24E89E6E596D1E7D3EDCBFE3C79A035 /* watchOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC9BD16E065DEC1EA1710D871DED9AF5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				038AEA9241DE2FAC0660DB66150F5BA7 /* CoreGraphics.framework */,
+				0AD825AE4FB7CFA5697713AD3A20FFDC /* Foundation.framework */,
+				3C143B2FDAB80BC8948A50A8895EAC23 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C0BB2AA45C9DDD1099A18D7461207CE1 /* Pods-BreadWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				07C6669C09F7F6392973C8C3E3CAEF94 /* Info.plist */,
+				2BDD1CCA0EF5B1DE7E6FDD13C2DC1CBF /* Pods-BreadWalletTests.modulemap */,
+				C614929243E5C7A792C244C58C7F2F0B /* Pods-BreadWalletTests-acknowledgements.markdown */,
+				EB276ACC4D2851A11007A6BB90B34D06 /* Pods-BreadWalletTests-acknowledgements.plist */,
+				43B896BBAD83908D22533BB2021A3116 /* Pods-BreadWalletTests-dummy.m */,
+				621F8EC4CF04765ACEBD378A731F4E29 /* Pods-BreadWalletTests-frameworks.sh */,
+				B9302CB0042B2FA7BC305585284C6E9A /* Pods-BreadWalletTests-resources.sh */,
+				B4B9BB1F9BE8B6DE4D031D2682F92205 /* Pods-BreadWalletTests-umbrella.h */,
+				C37B8B254F2CC637631D2BC6CECBDD38 /* Pods-BreadWalletTests.debug.xcconfig */,
+				2D56D5EC16A9EE18CF88CB7B62622811 /* Pods-BreadWalletTests.release.xcconfig */,
+				124D943B35F7C030ABD442BF51251CEE /* Pods-BreadWalletTests.testflight.xcconfig */,
+			);
+			name = "Pods-BreadWalletTests";
+			path = "Target Support Files/Pods-BreadWalletTests";
+			sourceTree = "<group>";
+		};
+		CF1F2314F735712350C10D1AAFE6DB61 /* Pods-TodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2BE9DBEC21667CFEFBFB72C7AC986F94 /* Info.plist */,
+				C59E3421AB88021BB739450A759A1754 /* Pods-TodayExtension.modulemap */,
+				5F32521E2AE84B6805CF37E703DEA29D /* Pods-TodayExtension-acknowledgements.markdown */,
+				25E3D18279873CD79371328FAA4FC211 /* Pods-TodayExtension-acknowledgements.plist */,
+				B26923BF0BCABA5A153ADC343D42FA21 /* Pods-TodayExtension-dummy.m */,
+				AB7774BE2F317DB1D0710CF3A1BFFDE4 /* Pods-TodayExtension-resources.sh */,
+				779D842613747BF0E1EC927D82799AAC /* Pods-TodayExtension-umbrella.h */,
+				93BF3B798271B21F9F1126D7E419D6FC /* Pods-TodayExtension.debug.xcconfig */,
+				3209DFBB1CE3E6D97D6F7D5D2E9E53FE /* Pods-TodayExtension.release.xcconfig */,
+				8E4717A5235B08F7418FCC7607489FAD /* Pods-TodayExtension.testflight.xcconfig */,
+			);
+			name = "Pods-TodayExtension";
+			path = "Target Support Files/Pods-TodayExtension";
+			sourceTree = "<group>";
+		};
+		F24E89E6E596D1E7D3EDCBFE3C79A035 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				C166F2024AB1BFE5E8F7D5C1357D788C /* Foundation.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		F5B7B38589327481A51D59AED1FBFCD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FED49EA3936FCBF2EFBCFCCD1C296EC1 /* IQKeyboardManager */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FED49EA3936FCBF2EFBCFCCD1C296EC1 /* IQKeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				0B6C4F269F6E647223486ECA5E51A3C3 /* IQBarButtonItem.h */,
+				BC46B73405F15E30F258E0E242BD3195 /* IQBarButtonItem.m */,
+				49EA6001D58E9B4AB8487F6906159B6C /* IQKeyboardManager.h */,
+				5005437EADE20F723DB76D22D6576841 /* IQKeyboardManager.m */,
+				7FE7955CE84A25E8A3638329D1B79CDC /* IQKeyboardManagerConstants.h */,
+				FC74225F07D4EB3F2ACC367CBC04DDF0 /* IQKeyboardManagerConstantsInternal.h */,
+				96C1904322078CB7B8F1CDC8ABA697CB /* IQKeyboardReturnKeyHandler.h */,
+				BC31958BDCEB68025875697D52D44FC1 /* IQKeyboardReturnKeyHandler.m */,
+				189C90B4304A11836FB4A40C795B1E30 /* IQNSArray+Sort.h */,
+				CB01C1297440515DA88B6B4AE86D7A5F /* IQNSArray+Sort.m */,
+				FBAA27AE856995F1CDD714E88F8ECDCD /* IQPreviousNextView.h */,
+				4C15DC91CD486208825B85485B0B00F8 /* IQPreviousNextView.m */,
+				38B5A8B8566C861513B180E6D05A4F52 /* IQTextView.h */,
+				2472ECC83BF104AE7026F0B7E816F2C0 /* IQTextView.m */,
+				326B06E697170E48D291CCAB5B194756 /* IQTitleBarButtonItem.h */,
+				033D8AA8997113635F9535EC2D061040 /* IQTitleBarButtonItem.m */,
+				B2BE1C754736B510FEFE3C9FA64E05DB /* IQToolbar.h */,
+				9ECEDFD88A146224DD396D4BADA25B26 /* IQToolbar.m */,
+				864ACB08131AD9FF9D51FA43BC853655 /* IQUIScrollView+Additions.h */,
+				8A746B4F4DD70EE9FEAC125F52AD9AD1 /* IQUIScrollView+Additions.m */,
+				6E54F97511FA7FAA91CBC163BEEBE45C /* IQUITextFieldView+Additions.h */,
+				A85D95AE8C82DE39E95B91E1DC71CC51 /* IQUITextFieldView+Additions.m */,
+				0CBDDBB93124188EDACB9CE56DF0AD77 /* IQUIView+Hierarchy.h */,
+				879CB55F3E503D673F59EC0B73CBE07C /* IQUIView+Hierarchy.m */,
+				0C2F52C991E8610B08A1FA60292329C4 /* IQUIView+IQKeyboardToolbar.h */,
+				027F47F140C6533212E81C1308BC4283 /* IQUIView+IQKeyboardToolbar.m */,
+				A25EB4FF16E3F9D10971A51D4DEC0C0E /* IQUIViewController+Additions.h */,
+				8BCCAEC5B0E2F1338DE967D2121AD620 /* IQUIViewController+Additions.m */,
+				1C291F74107C277BE63BF3A86CBE2B18 /* IQUIWindow+Hierarchy.h */,
+				622C39A05CD79DAC62C139C54A2CA22B /* IQUIWindow+Hierarchy.m */,
+				3CE9B26FBD74C7B8A142ED7EAAB40362 /* Resources */,
+				1A6A308702EB928EE7BFCC75C70946CC /* Support Files */,
+			);
+			name = IQKeyboardManager;
+			path = IQKeyboardManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1C0DBABC4A6BA6B248F949ACE1A1E703 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDE5823778595155808CA0DDD81A14F /* Pods-breadwallet-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F29D6ED740D8B86E820293253868FAC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A006DBB78EFECCB514645F9E1240E833 /* Pods-BreadWalletTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACEE43D04584A4CD1B266D089699108D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F9105ED9E7F4DA500277C4DAA6AB2BD /* Pods-WatchApp Extension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06EB1AB09E89A31095F94D5D97C1DE9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06ECA12A57D0B1EFDE59F44EA9A2E3E4 /* Pods-TodayExtension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8464B0DBD37C8AC245E5501D36FF21 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C940DAD70C5E5FD35A49B437CC9AA8A9 /* IQBarButtonItem.h in Headers */,
+				C1E531769B0733E5207F75C41ACA56E4 /* IQKeyboardManager-umbrella.h in Headers */,
+				2786F7B7514EF72F8C2477AE7E1C543C /* IQKeyboardManager.h in Headers */,
+				2B845606EB8BE11829F4B98D8051DBE3 /* IQKeyboardManagerConstants.h in Headers */,
+				F92DB05893BF5D5DE38974C1E722BAF4 /* IQKeyboardManagerConstantsInternal.h in Headers */,
+				21A8C0B8B9462D155109FC484470AB03 /* IQKeyboardReturnKeyHandler.h in Headers */,
+				F18E3AB6AFB1D7A638A6A996B6BAC0A4 /* IQNSArray+Sort.h in Headers */,
+				6E62E8D91C29477A16EC7DC71B67F80C /* IQPreviousNextView.h in Headers */,
+				7718A6CCF6F5A68F86F54B0A24D9C0D8 /* IQTextView.h in Headers */,
+				6734725DE2379E96FC60785098E2FB39 /* IQTitleBarButtonItem.h in Headers */,
+				82637BC62DD399A757E546D4FB6864A1 /* IQToolbar.h in Headers */,
+				9B90FE1C9CF33C83E2F34ED3D0F532D7 /* IQUIScrollView+Additions.h in Headers */,
+				EC0E1DE220030BD0AC693CBB16AE9D3B /* IQUITextFieldView+Additions.h in Headers */,
+				98157A56868DBFFA2307E2412A554E91 /* IQUIView+Hierarchy.h in Headers */,
+				A9D536EE10BCDA123C826EA5C0B48C6B /* IQUIView+IQKeyboardToolbar.h in Headers */,
+				A6DC65A256DC4C9215FA524AE27FD944 /* IQUIViewController+Additions.h in Headers */,
+				DBB996FDBB616A7865A1209CB78B2424 /* IQUIWindow+Hierarchy.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E260BF6017D0609E2F1726A85DB6F246 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79CA0EFB765EC17688AA2F6A0DA50CA5 /* Pods-BreadWalletUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E53B98F699D48EB6A4CF2CBF9438B238 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B568BE459A2F790F792C6B91430DCB77 /* Pods-WatchApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		26C349A59FC430474782CDDED2A2129C /* IQKeyboardManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8802CEF229FD618BEF39F56DF5AC407C /* Build configuration list for PBXNativeTarget "IQKeyboardManager" */;
+			buildPhases = (
+				A4FA410A2D7FECF94D3148446133D4F9 /* Sources */,
+				E97234170AE76237452A86445B505995 /* Frameworks */,
+				DE8464B0DBD37C8AC245E5501D36FF21 /* Headers */,
+				D2B984223DFE4B56D857C2868C5FC7DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IQKeyboardManager;
+			productName = IQKeyboardManager;
+			productReference = D8D4E13B096281088343353DCBD9AD1D /* IQKeyboardManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2A04AFB8C3DBF082B7A8F324FF70D050 /* Pods-BreadWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04D929E4EA5B01DD4A8492585D99C41E /* Build configuration list for PBXNativeTarget "Pods-BreadWalletTests" */;
+			buildPhases = (
+				527964A2614870C74F4A2AB196F4C48C /* Sources */,
+				4F71E8026CA01E069AB6E5B948F14DDE /* Frameworks */,
+				8F29D6ED740D8B86E820293253868FAC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BreadWalletTests";
+			productName = "Pods-BreadWalletTests";
+			productReference = BECD3E4000B8DE30B164C10CA4E65008 /* Pods_BreadWalletTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2E697F67935551D94DD051E3CFCE5F0B /* Pods-WatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78D284689D9AA6D04C70BC10E39B23E5 /* Build configuration list for PBXNativeTarget "Pods-WatchApp" */;
+			buildPhases = (
+				5C66903FD3015CC3F26A7551CF74461E /* Sources */,
+				40D21053DB6FFDD99C3DD675ACA4366C /* Frameworks */,
+				E53B98F699D48EB6A4CF2CBF9438B238 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-WatchApp";
+			productName = "Pods-WatchApp";
+			productReference = B5F31B43CA07C539DA77BD24C0B8055C /* Pods_WatchApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8512D761E3F629166D5B4903B74398F1 /* Pods-WatchApp Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FC7B6DED78E840634159E47E4FEC2E8 /* Build configuration list for PBXNativeTarget "Pods-WatchApp Extension" */;
+			buildPhases = (
+				60AF82BC8CEE52460EAFBEDECE4F2526 /* Sources */,
+				9DC4A73903DB018AAF7006948EAAABD1 /* Frameworks */,
+				ACEE43D04584A4CD1B266D089699108D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-WatchApp Extension";
+			productName = "Pods-WatchApp Extension";
+			productReference = 54FCEBEC6B1A717DE0941356C3ABC77B /* Pods_WatchApp_Extension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AAB054440FC544E98D45A80EA5CCF1C0 /* Pods-breadwallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2D241308BDC916DD0980C213B0FC708 /* Build configuration list for PBXNativeTarget "Pods-breadwallet" */;
+			buildPhases = (
+				29ADC79FEDC498E1968DEB481ABA971F /* Sources */,
+				3750AB5BDDAA26CD907DF141CD21CEDC /* Frameworks */,
+				1C0DBABC4A6BA6B248F949ACE1A1E703 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F2849B8DD2AF440CE83C7221B579536 /* PBXTargetDependency */,
+			);
+			name = "Pods-breadwallet";
+			productName = "Pods-breadwallet";
+			productReference = D8B9209DE14F4A1A60D1D5794BFEBC04 /* Pods_breadwallet.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AE8D63FC3220A168619D720592D6AEFC /* Pods-TodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 136A5F585CC2A0D92CC1FB99FFAE0B14 /* Build configuration list for PBXNativeTarget "Pods-TodayExtension" */;
+			buildPhases = (
+				A9FCCB889FA96A2CFEB70A29D3B2BD0D /* Sources */,
+				E3B507A30E397D2F3BB2A0641B56B457 /* Frameworks */,
+				D06EB1AB09E89A31095F94D5D97C1DE9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TodayExtension";
+			productName = "Pods-TodayExtension";
+			productReference = 925C54A187EACE899A3CA719C8173935 /* Pods_TodayExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CF313BD7C3AC22AB7A1A1C17871C93CC /* Pods-BreadWalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4400EB624712BF6AB3100F70CE36BAC9 /* Build configuration list for PBXNativeTarget "Pods-BreadWalletUITests" */;
+			buildPhases = (
+				2CC5EF5585A6AE19091F8263FBF9A9D1 /* Sources */,
+				89DD908492A30C41AE9FCAC2509EEA97 /* Frameworks */,
+				E260BF6017D0609E2F1726A85DB6F246 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BreadWalletUITests";
+			productName = "Pods-BreadWalletUITests";
+			productReference = E1D058D294FDC742FDE6FC9D6DFF2105 /* Pods_BreadWalletUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 40E639630B04AC07E6DACD80EB35AF2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26C349A59FC430474782CDDED2A2129C /* IQKeyboardManager */,
+				AAB054440FC544E98D45A80EA5CCF1C0 /* Pods-breadwallet */,
+				2A04AFB8C3DBF082B7A8F324FF70D050 /* Pods-BreadWalletTests */,
+				CF313BD7C3AC22AB7A1A1C17871C93CC /* Pods-BreadWalletUITests */,
+				AE8D63FC3220A168619D720592D6AEFC /* Pods-TodayExtension */,
+				2E697F67935551D94DD051E3CFCE5F0B /* Pods-WatchApp */,
+				8512D761E3F629166D5B4903B74398F1 /* Pods-WatchApp Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2B984223DFE4B56D857C2868C5FC7DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF2B4997CA1899134F950CCDB81FAA1 /* IQKeyboardManager.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29ADC79FEDC498E1968DEB481ABA971F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A93F7338F61F53B1111E1B6B64015311 /* Pods-breadwallet-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC5EF5585A6AE19091F8263FBF9A9D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72D7B2B3BD1CB895430C9A4CD766B4D9 /* Pods-BreadWalletUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		527964A2614870C74F4A2AB196F4C48C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBC5FF7B4CD4050E2F9CD71C59CD1D6C /* Pods-BreadWalletTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C66903FD3015CC3F26A7551CF74461E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8A4067C8B1AB6208A6BE77BB26DEC6D /* Pods-WatchApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60AF82BC8CEE52460EAFBEDECE4F2526 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				197F7FD27FE6E1710EC10D982FDF9130 /* Pods-WatchApp Extension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4FA410A2D7FECF94D3148446133D4F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				069FCC7E71C36B74F33D5E5A61B29DDE /* IQBarButtonItem.m in Sources */,
+				152922B5EC32859523F849B93347F246 /* IQKeyboardManager-dummy.m in Sources */,
+				535693E3F93988683FB5C91A785D75DB /* IQKeyboardManager.m in Sources */,
+				B732F9603399E38A5E22CC6D53F9349F /* IQKeyboardReturnKeyHandler.m in Sources */,
+				0BE2F7B0818A0D71D7E3D55955B2E95C /* IQNSArray+Sort.m in Sources */,
+				023622C82EEB1452B670BF25BA95D5DB /* IQPreviousNextView.m in Sources */,
+				4966448A291C2920D096EC64A90FFC44 /* IQTextView.m in Sources */,
+				543280D90A95912AD8187872C0B849CA /* IQTitleBarButtonItem.m in Sources */,
+				205D7F14403318E3F6184F47E8D2BB08 /* IQToolbar.m in Sources */,
+				ACFBBB994C6E9F2C6B822B51AF2DB0FA /* IQUIScrollView+Additions.m in Sources */,
+				4E88995F98033E6C05078C98D09837A4 /* IQUITextFieldView+Additions.m in Sources */,
+				E8C199345E9BF9CD78B8DC725B1E548C /* IQUIView+Hierarchy.m in Sources */,
+				C0C7914142A7DAAFE1E595B5899C57E1 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				8C086B7B067A03891615F5E648621D35 /* IQUIViewController+Additions.m in Sources */,
+				4FB3167D09122AF3EE564FB4147EB902 /* IQUIWindow+Hierarchy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9FCCB889FA96A2CFEB70A29D3B2BD0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				611269F1AEC2D87577A1F237DD235FA6 /* Pods-TodayExtension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F2849B8DD2AF440CE83C7221B579536 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IQKeyboardManager;
+			target = 26C349A59FC430474782CDDED2A2129C /* IQKeyboardManager */;
+			targetProxy = CF79531260D9998B939E9C7D9336D210 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A2138FDC054C3E6D573950D9A186AEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80FDCCA980997809E1B8633A4511315E /* Pods-breadwallet.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-breadwallet/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-breadwallet/Pods-breadwallet.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_breadwallet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		18164C0871648A08DA3151A086455503 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D127E2AA6F682C6E95553F6EBA38080 /* Pods-breadwallet.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-breadwallet/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-breadwallet/Pods-breadwallet.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_breadwallet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		193416F04E8DF6E70D255AA9A9E8B8D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 290F7289CD50236188DE133452D03EAE /* IQKeyboardManager.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IQKeyboardManager/IQKeyboardManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = IQKeyboardManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		19B03E64066F71236BCCD42820E5723F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3209DFBB1CE3E6D97D6F7D5D2E9E53FE /* Pods-TodayExtension.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TodayExtension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TodayExtension/Pods-TodayExtension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TodayExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5656D53FC9BBCF9282A9194B13C4A308 /* Testflight */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B1C3C364C1812141A54269BA3539146 /* Pods-WatchApp Extension.testflight.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WatchApp Extension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WatchApp Extension/Pods-WatchApp Extension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_WatchApp_Extension;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Testflight;
+		};
+		5816B46FE903C39337F787AB9A7CD7CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE6205B75D7901987D8C3E19526F61A9 /* Pods-BreadWalletUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BreadWalletUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BreadWalletUITests/Pods-BreadWalletUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BreadWalletUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		682A5EE03734C105D7A2BC878CD83C59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D56D5EC16A9EE18CF88CB7B62622811 /* Pods-BreadWalletTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BreadWalletTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BreadWalletTests/Pods-BreadWalletTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BreadWalletTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6B07B193EF1422877E3F3611C1173A81 /* Testflight */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_TESTFLIGHT=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Testflight;
+		};
+		824F7F0CAEDF09CB1E949F896CF3D6D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70CFDAF1B78534BEB53A883277BA9E4B /* Pods-WatchApp Extension.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WatchApp Extension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WatchApp Extension/Pods-WatchApp Extension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_WatchApp_Extension;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		85CAC4BD01B670E34A8F8833E5BCFD0E /* Testflight */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 124D943B35F7C030ABD442BF51251CEE /* Pods-BreadWalletTests.testflight.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BreadWalletTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BreadWalletTests/Pods-BreadWalletTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BreadWalletTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Testflight;
+		};
+		99ED12B7718AB9ACD7FC75401C600B7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 290F7289CD50236188DE133452D03EAE /* IQKeyboardManager.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IQKeyboardManager/IQKeyboardManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = IQKeyboardManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A7C7094B95D2635C72830DC70C42FDED /* Testflight */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFD746DBE27D71AAFAC931F13ED66092 /* Pods-breadwallet.testflight.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-breadwallet/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-breadwallet/Pods-breadwallet.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_breadwallet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Testflight;
+		};
+		A7E3776EA70CB4309C45BA9F91F7A423 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93BF3B798271B21F9F1126D7E419D6FC /* Pods-TodayExtension.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TodayExtension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TodayExtension/Pods-TodayExtension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TodayExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AB390DC169305285E8AD26EC55064EA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		B058C1935D76872ACED1940890D5D816 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27F3F344AE8F67D2FBE15D4E2E3C0161 /* Pods-BreadWalletUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BreadWalletUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BreadWalletUITests/Pods-BreadWalletUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BreadWalletUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B39174590C3104ABD883480C8AEC6435 /* Testflight */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 290F7289CD50236188DE133452D03EAE /* IQKeyboardManager.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IQKeyboardManager/IQKeyboardManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = IQKeyboardManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Testflight;
+		};
+		BE2DFE057B75C55D5F186303FE83B46C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		C481E4F9151258328CAE9F764B43B81F /* Testflight */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E4717A5235B08F7418FCC7607489FAD /* Pods-TodayExtension.testflight.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TodayExtension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TodayExtension/Pods-TodayExtension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TodayExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Testflight;
+		};
+		E3E4307F603682563727475A92C93941 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C47DDF439ED2FB52F8B7EFBA0B3A0D1B /* Pods-WatchApp.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WatchApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WatchApp/Pods-WatchApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_WatchApp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		E4C701194328308726418D8689D90851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B008616BC396F0B7915EA6EAB5981451 /* Pods-WatchApp.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WatchApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WatchApp/Pods-WatchApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_WatchApp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		EA8DA9EF07E4249F375558C8F3A5DF42 /* Testflight */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D79A6DD055A4DCD25B664894D796441 /* Pods-BreadWalletUITests.testflight.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BreadWalletUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BreadWalletUITests/Pods-BreadWalletUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BreadWalletUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Testflight;
+		};
+		EB24375779188D216B38252717589E24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 994F8AE593D1C6F9EEF57D607E87BDC3 /* Pods-WatchApp Extension.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WatchApp Extension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WatchApp Extension/Pods-WatchApp Extension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_WatchApp_Extension;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		F124048746EA44EBFFCAE73D6F706389 /* Testflight */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D242499147EB778CE1D6289EDF83005 /* Pods-WatchApp.testflight.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WatchApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WatchApp/Pods-WatchApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_WatchApp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Testflight;
+		};
+		FC9758B0AF9DC4077CF97C27BE50C415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C37B8B254F2CC637631D2BC6CECBDD38 /* Pods-BreadWalletTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BreadWalletTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BreadWalletTests/Pods-BreadWalletTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BreadWalletTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04D929E4EA5B01DD4A8492585D99C41E /* Build configuration list for PBXNativeTarget "Pods-BreadWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC9758B0AF9DC4077CF97C27BE50C415 /* Debug */,
+				682A5EE03734C105D7A2BC878CD83C59 /* Release */,
+				85CAC4BD01B670E34A8F8833E5BCFD0E /* Testflight */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		136A5F585CC2A0D92CC1FB99FFAE0B14 /* Build configuration list for PBXNativeTarget "Pods-TodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7E3776EA70CB4309C45BA9F91F7A423 /* Debug */,
+				19B03E64066F71236BCCD42820E5723F /* Release */,
+				C481E4F9151258328CAE9F764B43B81F /* Testflight */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE2DFE057B75C55D5F186303FE83B46C /* Debug */,
+				AB390DC169305285E8AD26EC55064EA3 /* Release */,
+				6B07B193EF1422877E3F3611C1173A81 /* Testflight */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FC7B6DED78E840634159E47E4FEC2E8 /* Build configuration list for PBXNativeTarget "Pods-WatchApp Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				824F7F0CAEDF09CB1E949F896CF3D6D6 /* Debug */,
+				EB24375779188D216B38252717589E24 /* Release */,
+				5656D53FC9BBCF9282A9194B13C4A308 /* Testflight */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4400EB624712BF6AB3100F70CE36BAC9 /* Build configuration list for PBXNativeTarget "Pods-BreadWalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5816B46FE903C39337F787AB9A7CD7CD /* Debug */,
+				B058C1935D76872ACED1940890D5D816 /* Release */,
+				EA8DA9EF07E4249F375558C8F3A5DF42 /* Testflight */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78D284689D9AA6D04C70BC10E39B23E5 /* Build configuration list for PBXNativeTarget "Pods-WatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3E4307F603682563727475A92C93941 /* Debug */,
+				E4C701194328308726418D8689D90851 /* Release */,
+				F124048746EA44EBFFCAE73D6F706389 /* Testflight */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8802CEF229FD618BEF39F56DF5AC407C /* Build configuration list for PBXNativeTarget "IQKeyboardManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99ED12B7718AB9ACD7FC75401C600B7D /* Debug */,
+				193416F04E8DF6E70D255AA9A9E8B8D8 /* Release */,
+				B39174590C3104ABD883480C8AEC6435 /* Testflight */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2D241308BDC916DD0980C213B0FC708 /* Build configuration list for PBXNativeTarget "Pods-breadwallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18164C0871648A08DA3151A086455503 /* Debug */,
+				0A2138FDC054C3E6D573950D9A186AEB /* Release */,
+				A7C7094B95D2635C72830DC70C42FDED /* Testflight */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

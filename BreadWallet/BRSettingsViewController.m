@@ -23,6 +23,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+// Updated by Farrukh Askari <farrukh.askari01@gmail.com> on 3:22 PM 17/4/17.
+
 #import "BRSettingsViewController.h"
 #import "BRSeedViewController.h"
 #import "BRWalletManager.h"
@@ -329,11 +331,11 @@
             
             switch (indexPath.row) {
                 case 0:
-                    cell.textLabel.text = NSLocalizedString(@"about", nil);
+                    cell.textLabel.text = NSLocalizedString(@"About", nil);
                     break;
                     
                 case 1:
-                    cell.textLabel.text = NSLocalizedString(@"recovery phrase", nil);
+                    cell.textLabel.text = NSLocalizedString(@"Recovery Phrase", nil);
                     break;
             }
             
@@ -349,7 +351,7 @@
                 case 1:
                     if (self.touchId) {
                         cell = [tableView dequeueReusableCellWithIdentifier:selectorIdent];
-                        cell.textLabel.text = NSLocalizedString(@"touch id limit", nil);
+                        cell.textLabel.text = NSLocalizedString(@"Touch ID Limit", nil);
                         cell.detailTextLabel.text = [manager stringForAmount:manager.spendingLimit];
                     } else {
                         goto _switch_cell;
@@ -360,7 +362,7 @@
 _switch_cell:
                     cell = [tableView dequeueReusableCellWithIdentifier:@"SwitchCell" forIndexPath:indexPath];
                     BRUserDefaultsSwitchCell *switchCell = (BRUserDefaultsSwitchCell *)cell;
-                    switchCell.titleLabel.text = NSLocalizedString(@"enable receive notifications", nil);
+                    switchCell.titleLabel.text = NSLocalizedString(@"Enable Receive Notifications", nil);
                     [switchCell setUserDefaultsKey:USER_DEFAULTS_LOCAL_NOTIFICATIONS_KEY];
                     break;
                 }
@@ -373,7 +375,7 @@ _switch_cell:
             switch (indexPath.row) {
                 case 0:
                     cell = [tableView dequeueReusableCellWithIdentifier:actionIdent];
-                    cell.textLabel.text = NSLocalizedString(@"change passcode", nil);
+                    cell.textLabel.text = NSLocalizedString(@"Change Passcode", nil);
                     break;
                     
                 case 1:
@@ -382,7 +384,7 @@ _switch_cell:
                     
                 case 2:
                     cell = [tableView dequeueReusableCellWithIdentifier:actionIdent];
-                    cell.textLabel.text = NSLocalizedString(@"rescan blockchain", nil);
+                    cell.textLabel.text = NSLocalizedString(@"Rescan Blockchain", nil);
                     break;
 
             }
@@ -390,7 +392,7 @@ _switch_cell:
             
         case 3: 
             cell = [tableView dequeueReusableCellWithIdentifier:actionIdent];
-            cell.textLabel.text = @"early access";
+            cell.textLabel.text = @"Early Access";
 
             if (![WKWebView class] || ![[BRAPIClient sharedClient] featureEnabled:BRFeatureFlagsEarlyAccess]) {
                 cell = [[UITableViewCell alloc] initWithFrame:CGRectZero];
@@ -420,8 +422,9 @@ _switch_cell:
             return nil;
             
         case 3:
-            return NSLocalizedString(@"rescan blockchain if you think you may have missing transactions, "
-                                     "or are having trouble sending (rescanning can take several minutes)", nil);
+//            return NSLocalizedString(@"rescan blockchain if you think you may have missing transactions, "
+//                                     "or are having trouble sending (rescanning can take several minutes)", nil);
+            return nil;
     }
     
     return nil;

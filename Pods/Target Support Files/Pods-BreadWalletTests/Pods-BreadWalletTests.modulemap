@@ -1,0 +1,6 @@
+framework module Pods_BreadWalletTests {
+  umbrella header "Pods-BreadWalletTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
