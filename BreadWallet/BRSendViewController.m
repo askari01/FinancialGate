@@ -46,6 +46,7 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "UIImage+Utils.h"
 #import "BRAppGroupConstants.h"
+#import "BRWalletManager.h"
 
 
 #define SCAN_TIP      NSLocalizedString(@"Scan someone else's QR code to get their bitcoin address. "\
@@ -73,7 +74,7 @@ static NSString *sanitizeString(NSString *s)
 @property (nonatomic, strong) BRTransaction *sweepTx;
 @property (nonatomic, strong) BRPaymentProtocolRequest *request;
 @property (nonatomic, strong) NSURL *url, *callback;
-@property (nonatomic, assign) uint64_t amount;
+@property (nonatomic, assign) double amount;
 @property (nonatomic, strong) NSString *okAddress, *okIdentity;
 @property (nonatomic, strong) BRBubbleView *tipView;
 @property (nonatomic, strong) BRScanViewController *scanController;
@@ -81,7 +82,7 @@ static NSString *sanitizeString(NSString *s)
 @property (nonatomic, strong) NSUserDefaults *groupDefs;
 @property (nonatomic, strong) BRPaymentRequest *paymentRequest;
 @property (nonatomic, strong) UIImage *qrImage;
-@property (nonatomic, assign) uint64_t balance;
+@property (nonatomic, assign) double balance;
 
 
 @property (nonatomic, strong) IBOutlet UILabel *sendLabel;
@@ -94,6 +95,8 @@ static NSString *sanitizeString(NSString *s)
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
 @property (weak, nonatomic) IBOutlet UIButton *receieveButton;
 @property (nonatomic, strong) IBOutlet UIGestureRecognizer *navBarTap;
+
+@property (nonatomic, strong) id urlObserver, fileObserver, protectedObserver, balanceObserver, seedObserver;
 
 
 @end
@@ -159,27 +162,45 @@ int check = 1;
 //    }
 
     // Balance
-    if (_balance && [UIApplication sharedApplication].applicationState != UIApplicationStateBackground) {
-        [self.view addSubview:[[[BRBubbleView viewWithText:[NSString
-                                                            stringWithFormat:NSLocalizedString(@"received %@ (%@)", nil), [manager stringForAmount: _balance],
-                                                            [manager localCurrencyStringForAmount:- _balance]]
-                                                    center:CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2)] popIn]
-                               popOutAfterDelay:3.0]];
-    }
-    
-    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
-    NSLog(@"hello %@", [defs valueForKey:@"BALANCE_KEY"]);
-//    [defs doubleForKey:BALANCE_KEY];
-    NSLog(@"hello %@ (%@)", [manager stringForAmount: _balance],
-           [manager localCurrencyStringForAmount: _balance]);
-    _btc.text = [manager stringForAmount: _balance];
-    _money.text = [manager localCurrencyStringForAmount: _balance];
+//    if (_balance && [UIApplication sharedApplication].applicationState != UIApplicationStateBackground) {
+//        [self.view addSubview:[[[BRBubbleView viewWithText:[NSString
+//                                                            stringWithFormat:NSLocalizedString(@"received %@ (%@)", nil), [manager stringForAmount: _balance],
+//                                                            [manager localCurrencyStringForAmount:- _balance]]
+//                                                    center:CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2)] popIn]
+//                               popOutAfterDelay:3.0]];
+//    }
+//    
+//    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+//    NSLog(@"hello %@", [defs doubleForKey:@"BALANCE_KEY"]);
+////    [defs doubleForKey:BALANCE_KEY];
+//    NSLog(@"hello %@ (%@)", [manager stringForAmount: _balance],
+//           [manager localCurrencyStringForAmount: _balance]);
+//    _btc.text = [manager stringForAmount: _balance];
+//    _money.text = [manager localCurrencyStringForAmount: _balance];
     // END Balance
+    
+    self.balanceObserver =
+    [[NSNotificationCenter defaultCenter] addObserverForName:BRWalletBalanceChangedNotification object:nil queue:nil
+                                                  usingBlock:^(NSNotification *note) {
+                                                      double progress = [BRPeerManager sharedInstance].syncProgress;
+                                                      
+                                                      if (_balance != UINT64_MAX && progress > DBL_EPSILON && progress + DBL_EPSILON < 1.0) { // wait for sync
+                                                          self.balance = _balance; // this updates the local currency value with the latest exchange rate
+                                                          return;
+                                                      }
+                                                      
+                                                      self.balance = manager.wallet.balance;
+                                                      NSLog(@"Balance: @%",manager.wallet.balance);
+                                                      _btc.text = [manager stringForAmount: _balance];
+                                                      _money.text = [manager localCurrencyStringForAmount: _balance];
+                                                  }];
     
     // END Code
     
     
 }
+
+
 - (IBAction)ReceieveButton:(id)sender {
     
         BRPaymentRequest *req1;
@@ -236,6 +257,66 @@ int check = 1;
 {
     [super viewWillAppear:animated];
     [self cancel:nil];
+    
+    // Code
+    BRWalletManager *manager = [BRWalletManager sharedInstance];
+    BRPaymentRequest *req;
+    
+    self.groupDefs = [[NSUserDefaults alloc] initWithSuiteName:APP_GROUP_ID];
+    req = (_paymentRequest) ? _paymentRequest :
+    [BRPaymentRequest requestWithString:[self.groupDefs stringForKey:APP_GROUP_RECEIVE_ADDRESS_KEY]];
+    
+    if (req.isValid) {
+        if (! _qrImage) {
+            NSString *image = @"qr.png";
+            
+            NSArray *paths = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:@"qr.png"];
+            //            NSString *cache = [paths objectAtIndex:0];
+            //            NSString *fullPath = [NSString stringWithFormat:@"%@/%@", cache, image];
+            //            UIImage *image = [UIImage imageWithContentsOfFile:fullPath];
+            _qrImage = [[UIImage imageWithContentsOfFile:paths] resize:self.qrView.bounds.size
+                                              withInterpolationQuality:kCGInterpolationNone];
+        }
+        
+        self.qrView.image = _qrImage;
+        //        [self.addressButton setTitle:req.paymentAddress forState:UIControlStateNormal];
+    }
+    
+    // Balance
+//    if (_balance && [UIApplication sharedApplication].applicationState != UIApplicationStateBackground) {
+//        [self.view addSubview:[[[BRBubbleView viewWithText:[NSString
+//                                                            stringWithFormat:NSLocalizedString(@"received %@ (%@)", nil), [manager stringForAmount: _balance],
+//                                                            [manager localCurrencyStringForAmount:- _balance]]
+//                                                    center:CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2)] popIn]
+//                               popOutAfterDelay:3.0]];
+//    }
+//    
+//    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+//    NSLog(@"hello %@", [defs doubleForKey:@"BALANCE_KEY"]);
+//    //    [defs doubleForKey:BALANCE_KEY];
+//    NSLog(@"hello %@ (%@)", [manager stringForAmount: _balance],
+//          [manager localCurrencyStringForAmount: _balance]);
+//    _btc.text = [manager stringForAmount: _balance];
+//    _money.text = [manager localCurrencyStringForAmount: _balance];
+    // END Balance
+    
+    self.balanceObserver =
+    [[NSNotificationCenter defaultCenter] addObserverForName:BRWalletBalanceChangedNotification object:nil queue:nil
+                                                  usingBlock:^(NSNotification *note) {
+                                                      double progress = [BRPeerManager sharedInstance].syncProgress;
+                                                      
+                                                      if (_balance != UINT64_MAX && progress > DBL_EPSILON && progress + DBL_EPSILON < 1.0) { // wait for sync
+                                                          self.balance = _balance; // this updates the local currency value with the latest exchange rate
+                                                          return;
+                                                      }
+                                                      
+                                                      self.balance = manager.wallet.balance;
+                                                      NSLog(@"Balance: @%",manager.wallet.balance);
+                                                      _btc.text = [manager stringForAmount: _balance];
+                                                      _money.text = [manager localCurrencyStringForAmount: _balance];
+                                                  }];
+    
+    //
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -245,6 +326,66 @@ int check = 1;
     if (! self.scanController) {
         self.scanController = [self.storyboard instantiateViewControllerWithIdentifier:@"ScanViewController"];
     }
+    
+    // Code
+    BRWalletManager *manager = [BRWalletManager sharedInstance];
+    BRPaymentRequest *req;
+    
+    self.groupDefs = [[NSUserDefaults alloc] initWithSuiteName:APP_GROUP_ID];
+    req = (_paymentRequest) ? _paymentRequest :
+    [BRPaymentRequest requestWithString:[self.groupDefs stringForKey:APP_GROUP_RECEIVE_ADDRESS_KEY]];
+    
+    if (req.isValid) {
+        if (! _qrImage) {
+            NSString *image = @"qr.png";
+            
+            NSArray *paths = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:@"qr.png"];
+            //            NSString *cache = [paths objectAtIndex:0];
+            //            NSString *fullPath = [NSString stringWithFormat:@"%@/%@", cache, image];
+            //            UIImage *image = [UIImage imageWithContentsOfFile:fullPath];
+            _qrImage = [[UIImage imageWithContentsOfFile:paths] resize:self.qrView.bounds.size
+                                              withInterpolationQuality:kCGInterpolationNone];
+        }
+        
+        self.qrView.image = _qrImage;
+        //        [self.addressButton setTitle:req.paymentAddress forState:UIControlStateNormal];
+    }
+    
+    // Balance
+//    if (_balance && [UIApplication sharedApplication].applicationState != UIApplicationStateBackground) {
+//        [self.view addSubview:[[[BRBubbleView viewWithText:[NSString
+//                                                            stringWithFormat:NSLocalizedString(@"received %@ (%@)", nil), [manager stringForAmount: _balance],
+//                                                            [manager localCurrencyStringForAmount:- _balance]]
+//                                                    center:CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2)] popIn]
+//                               popOutAfterDelay:3.0]];
+//    }
+//    
+//    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+//    NSLog(@"hello %@", [defs doubleForKey:@"BALANCE_KEY"]);
+//    //    [defs doubleForKey:BALANCE_KEY];
+//    NSLog(@"hello %@ (%@)", [manager stringForAmount: _balance],
+//          [manager localCurrencyStringForAmount: _balance]);
+//    _btc.text = [manager stringForAmount: _balance];
+//    _money.text = [manager localCurrencyStringForAmount: _balance];
+    // END Balance
+    
+    self.balanceObserver =
+    [[NSNotificationCenter defaultCenter] addObserverForName:BRWalletBalanceChangedNotification object:nil queue:nil
+                                                  usingBlock:^(NSNotification *note) {
+                                                      double progress = [BRPeerManager sharedInstance].syncProgress;
+                                                      
+                                                      if (_balance != UINT64_MAX && progress > DBL_EPSILON && progress + DBL_EPSILON < 1.0) { // wait for sync
+                                                          self.balance = _balance; // this updates the local currency value with the latest exchange rate
+                                                          return;
+                                                      }
+                                                      
+                                                      self.balance = manager.wallet.balance;
+                                                      NSLog(@"Balance: @%",manager.wallet.balance);
+                                                      _btc.text = [manager stringForAmount: _balance];
+                                                      _money.text = [manager localCurrencyStringForAmount: _balance];
+                                                  }];
+    
+    //
 }
 
 - (void)viewWillDisappear:(BOOL)animated

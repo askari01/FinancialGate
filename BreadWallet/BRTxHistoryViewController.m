@@ -638,22 +638,22 @@ static NSString *dateFormat(NSString *template)
 //                    cell.textLabel.text = NSLocalizedString(@"Home", nil);
 //                    cell.imageView.image = [UIImage imageNamed:@""];
 //                    break;
-                case 0:
+                case 1:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"Wallet", nil);
                     cell.imageView.image = [UIImage imageNamed:@""];
                     break;
-                case 1:
+                case 2:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"Trade", nil);
                     cell.imageView.image = [UIImage imageNamed:@""];
                     break;
-                case 2:
+                case 3:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"Debit Card Charge", nil);
                     cell.imageView.image = [UIImage imageNamed:@""];
                     break;
-                case 3:
+                case 4:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"Apply For Debit Card", nil);
                     cell.imageView.image = [UIImage imageNamed:@""];
@@ -668,22 +668,22 @@ static NSString *dateFormat(NSString *template)
 //                    cell.textLabel.text = NSLocalizedString(@"Home", nil);
 //                    cell.imageView.image = [UIImage imageNamed:@""];
 //                    break;
-                case 4:
+                case 5:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"Savings Account", nil);
 //                    cell.imageView.image = [UIImage imageNamed:@"bitcoin-buy-blue-small"];
                     break;
-                case 5:
+                case 6:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"News", nil);
 //                    cell.imageView.image = [UIImage imageNamed:@""];
                     break;
-                case 6:
+                case 7:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"Import Private Key", nil);
 //                    cell.imageView.image = [UIImage imageNamed:@"cameraguide-blue-small"];
                     break;
-                case 7:
+                case 8:
                     cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
                     cell.textLabel.text = NSLocalizedString(@"Settings", nil);
 //                    cell.imageView.image = [UIImage imageNamed:@"settings"];
@@ -804,37 +804,37 @@ static NSString *dateFormat(NSString *template)
 //                    [self.navigationController pushViewController:destinationController animated:YES];
 //                    break;
                     
-                case 0: // Wallet
+                case 1: // Wallet
                     [BREventManager saveEvent:@"tx_history:Wallet"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"Wallet"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                 
-                case 1: // Trade
+                case 2: // Trade
                     [BREventManager saveEvent:@"tx_history:Trade"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"Trade"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                     
-                case 2: // DebitCardCharge
+                case 3: // DebitCardCharge
                     [BREventManager saveEvent:@"tx_history:DebitCardCharge"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"DebitCardCharge"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                     
-                case 3: // ApplyDebitCardCharge
+                case 4: // ApplyDebitCardCharge
                     [BREventManager saveEvent:@"tx_history:ApplyDebitCardCharge"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"ApplyDebitCard"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                     
-                case 4: // SavingAccount
+                case 5: // SavingAccount
                     [BREventManager saveEvent:@"tx_history:SavingAccount"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SavingAccount"];
                     [self.navigationController pushViewController:destinationController animated:YES];
                     break;
                     
-                case 5: // NEWS
+                case 6: // NEWS
                     [BREventManager saveEvent:@"tx_history:News"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"NEWS"];
                     [self.navigationController pushViewController:destinationController animated:YES];
@@ -847,12 +847,12 @@ static NSString *dateFormat(NSString *template)
 //                    [self showBuy];
 //                    break;
                     
-                case 6: // import private key
+                case 7: // import private key
                     [BREventManager saveEvent:@"tx_history:import_priv_key"];
                     [self scanQR:nil];
                     break;
 
-                case 7: // settings
+                case 8: // settings
                     [BREventManager saveEvent:@"tx_history:settings"];
                     destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
                     [self.navigationController pushViewController:destinationController animated:YES];

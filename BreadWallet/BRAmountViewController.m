@@ -62,7 +62,10 @@
     [charset addCharactersInString:manager.format.currencyDecimalSeparator];
     self.charset = charset;
 
-    self.payButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"pay", nil)
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor lightGrayColor];
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor lightGrayColor];
+//    self.payButton.title = @"pay";
+    self.payButton = [[UIBarButtonItem alloc] initWithTitle:@"pay"
                       style:UIBarButtonItemStylePlain target:self action:@selector(pay:)];
     self.amountField.placeholder = [manager stringForAmount:0];
     [self.decimalButton setTitle:manager.format.currencyDecimalSeparator forState:UIControlStateNormal];
@@ -96,6 +99,10 @@
         queue:nil usingBlock:^(NSNotification *note) {
             self.navigationItem.titleView = self.logo;
         }];
+    
+    self.navigationController.navigationBar.hidden = NO;
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
 }
 
 - (void)dealloc
@@ -115,10 +122,24 @@
     if (self.navigationController.viewControllers.firstObject != self) {
         self.navigationItem.leftBarButtonItem = nil;
         if ([BRWalletManager sharedInstance].didAuthenticate) [self unlock:nil];
+        
+        self.memoField.userInteractionEnabled = YES;
+        self.memoField.placeholder = NSLocalizedString(@"memo:", nil);
+        //        self.payButton.title = @"pay";
+        self.payButton.tintColor = [UIColor lightGrayColor];
+        self.navigationItem.leftBarButtonItem.tintColor = [UIColor lightGrayColor];
+        self.navigationItem.rightBarButtonItem.tintColor = [UIColor lightGrayColor];
+        self.payButton.title = NSLocalizedString(@"pay", nil);
+        self.navigationItem.rightBarButtonItem = self.payButton;
+        
     }
     else {
         self.memoField.userInteractionEnabled = YES;
         self.memoField.placeholder = NSLocalizedString(@"memo:", nil);
+//        self.payButton.title = @"pay";
+        self.payButton.tintColor = [UIColor lightGrayColor];
+        self.navigationItem.leftBarButtonItem.tintColor = [UIColor lightGrayColor];
+        self.navigationItem.rightBarButtonItem.tintColor = [UIColor lightGrayColor];
         self.payButton.title = NSLocalizedString(@"request", nil);
         self.navigationItem.rightBarButtonItem = self.payButton;
     }
@@ -160,6 +181,7 @@
     [BREventManager saveEvent:@"amount:successful_unlock"];
     
     self.navigationItem.titleView = nil;
+    self.payButton.title = @"pay";
     [self.navigationItem setRightBarButtonItem:self.payButton animated:(sender) ? YES : NO];
 }
 
@@ -409,7 +431,18 @@ replacementString:(NSString *)string
             [self.navigationItem setRightBarButtonItem:self.lock animated:YES];
         }
         else if (textVal.length > 0 && self.navigationItem.rightBarButtonItem != self.payButton) {
+            self.payButton.title = @"pay";
+//            self.payButton.title = NSLocalizedString(@"pay", nil);
             [self.navigationItem setRightBarButtonItem:self.payButton animated:YES];
+        } else {
+            self.memoField.userInteractionEnabled = YES;
+            self.memoField.placeholder = NSLocalizedString(@"memo:", nil);
+            //        self.payButton.title = @"pay";
+            self.payButton.tintColor = [UIColor lightGrayColor];
+            self.navigationItem.leftBarButtonItem.tintColor = [UIColor lightGrayColor];
+            self.navigationItem.rightBarButtonItem.tintColor = [UIColor lightGrayColor];
+            self.payButton.title = NSLocalizedString(@"pay", nil);
+            self.navigationItem.rightBarButtonItem = self.payButton;
         }
     }
 

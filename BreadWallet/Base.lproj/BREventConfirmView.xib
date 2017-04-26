@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,7 +41,7 @@
                                         </mask>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="kqc-0F-49V">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="kqc-0F-49V">
                                     <rect key="frame" x="30" y="129" width="315" height="134"/>
                                     <string key="text">Would you like to share anonymous app usage information with us?
 
@@ -82,6 +82,7 @@ This information is completely anonymous and includes no financial information. 
                                 <constraint firstItem="Mgm-wb-UlM" firstAttribute="top" secondItem="JxX-Qg-GdP" secondAttribute="top" constant="21" id="WYu-iT-s95"/>
                                 <constraint firstItem="Tw0-s4-w0k" firstAttribute="leading" secondItem="JxX-Qg-GdP" secondAttribute="leading" id="dzb-EH-TRB"/>
                                 <constraint firstItem="kqc-0F-49V" firstAttribute="leading" secondItem="JxX-Qg-GdP" secondAttribute="leading" constant="30" id="ic2-3L-XGp"/>
+                                <constraint firstItem="kqc-0F-49V" firstAttribute="top" secondItem="JxX-Qg-GdP" secondAttribute="top" constant="129" id="lrL-lV-lOJ"/>
                                 <constraint firstAttribute="trailing" secondItem="kqc-0F-49V" secondAttribute="trailing" constant="30" id="mDK-tH-3Ts"/>
                                 <constraint firstItem="Tw0-s4-w0k" firstAttribute="width" secondItem="fzO-vI-zum" secondAttribute="width" id="t2Y-r2-15X"/>
                                 <constraint firstItem="kqc-0F-49V" firstAttribute="top" secondItem="Mgm-wb-UlM" secondAttribute="bottom" constant="8" id="yEa-LY-XjK"/>
